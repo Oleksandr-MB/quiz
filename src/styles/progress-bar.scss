@@ -1,0 +1,14 @@
+@import "colors.scss";
+
+.quiz-progress {
+    font-weight: bold;
+    font-size: x-large;
+    color: $bg-primary;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: $disabled;
+    border: 1px solid $border;
+    margin-bottom: 2vh;
+}

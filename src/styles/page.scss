@@ -1,0 +1,27 @@
+@import "colors.scss";
+
+body {
+    background: radial-gradient($bg-primary 0.003%, $bg-secondary);
+    color: $normal-text;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.quiz-container {
+    min-height: 25vh;
+    width: 50vw;
+    font-family: monospace;
+    background: $primary;
+    border-radius: 4px;
+    margin-top: 10vh;
+    padding: 2vh 3vw;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+}

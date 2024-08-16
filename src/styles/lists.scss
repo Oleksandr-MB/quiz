@@ -1,0 +1,27 @@
+@import "colors.scss";
+
+ul {
+    margin-top: 1vh;
+    padding-left: 0;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    color: $normal-text;
+    cursor: pointer;
+    border: 1px solid $border;
+    border-radius: 2px;
+    margin-top: 2vh;
+    padding: 2%;
+}
+
+ul li.selected-topic, ul li.selected-answer {
+    background-color: $selected;
+    font-weight: bold;
+}
+
+ul li:hover {
+    background-color: $hovered-over;
+    font-weight: bold;
+}

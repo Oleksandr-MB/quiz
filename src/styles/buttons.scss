@@ -1,0 +1,25 @@
+@import "colors.scss";
+
+button {
+    cursor: pointer;
+    width: 100px;
+    background-color: $bg-primary;
+    color: $primary;
+    margin: 1.5vh 0 0 0;
+    padding: 1.5vh;
+    border-radius: 3px;
+    border: $bg-primary 1px solid;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: $bg-secondary;
+    border-color: $border;
+    background-color: $disabled;
+}
+
+button:hover:not(:disabled) {
+    background-color: $selected;
+    font-weight: bold;
+    color: $bg-primary;
+}
