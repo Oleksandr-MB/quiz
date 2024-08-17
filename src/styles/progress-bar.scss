@@ -1,14 +1,45 @@
 @import "colors.scss";
 
 .quiz-progress {
-    font-weight: bold;
-    font-size: x-large;
-    color: $bg-primary;
+    margin-bottom: 2vh;
+
+    .current-question-number {
+        font-weight: bold;
+        font-size: x-large;
+        color: $bg-primary;
+    }
+
+    .total-question-number {
+        font-weight: bold;
+        color: $border;
+    }
 }
 
-#progress-bar {
+.progress-bar-bg {
+    margin-bottom: 5vh;
+    position: relative;
+    height: 0.5vh;
     width: 100%;
-    background-color: $disabled;
-    border: 1px solid $border;
+    background: linear-gradient(90deg,blue, red);
     margin-bottom: 2vh;
+
+    .progress-bar {
+        transform-origin: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background: $disabled;
+        animation: progress var(--maxTime) linear forwards;
+    }
+
+    @keyframes progress {
+        0% { 
+            width: 100%; 
+        }
+        100% { 
+            width: 0%; 
+        }
+    }
 }
+

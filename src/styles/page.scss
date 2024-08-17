@@ -1,27 +1,69 @@
 @import "colors.scss";
 
 body {
-    background: radial-gradient($bg-primary 0.003%, $bg-secondary);
+    background: linear-gradient($bg-primary, $bg-secondary);
     color: $normal-text;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    align-items: center;
     height: 100vh;
 }
 
-.quiz-container {
-    min-height: 25vh;
+.main-container {
+    height: 70vh;
     width: 50vw;
     font-family: monospace;
     background: $primary;
-    border-radius: 4px;
-    margin-top: 10vh;
+    border-radius: 16px;
     padding: 2vh 3vw;
     box-sizing: border-box;
 }
 
-.footer {
-    display: flex;
-    gap: 5vw;
-    justify-content: center;
+@media only screen and (max-width: 1400px) {
+    .main-container {
+        height: 72.5vh;
+        width: 60vw;
+    }
 }
+
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        height: 75vh;
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container {
+        height: 77.5vh;
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-container {
+        height: 80vh;
+        width: 90vw;
+    }
+}
+.content-container {
+    height: 80%;
+}
+
+.header {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.question-text {
+    margin-bottom: 5vh;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.answer-input {
+    margin-top: 5vh;
+}
+

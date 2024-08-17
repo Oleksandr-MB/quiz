@@ -1,18 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import Welcome from './welcome.jsx';
-import SelectTopics from './select-topics.jsx';
-import MultipleChoiceQuestion from './multiple-choice-question.jsx';
-import OpenQuestion from './open-question.jsx';
-import Results from './results.jsx';
+import React, { useState, useEffect } from "react";
+import Welcome from "./welcome.jsx";
+import SelectTopics from "./select-topics.jsx";
+import Question from "./question.jsx";
+import Results from "./results.jsx";
+import Buttons from "./buttons.jsx";
 
 const Quiz = ({ questions, topics }) => {
     const [currentState, setCurrentState] = useState("welcome");
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(null));
-
     const [time, setTime] = useState(0);
-    const maxTime = 30;
+
+    const maxTime = questions.filter((q) => q.type === "multiple-choice").length*5 + questions.filter((q) => q.type === "open").length*10;
+    const progressBar = document.querySelector(".progress-bar");
+    if (progressBar) {
+        progressBar.style.setProperty("--maxTime", `${maxTime}s`);
+    }
+
+    const onStart = () => setCurrentState("select-topics");
+
+    const onBegin = () => setCurrentState("quiz");
 
     const onTopicClick = (topic) => {
         setSelectedTopics(prev => {
@@ -38,7 +46,7 @@ const Quiz = ({ questions, topics }) => {
             setCurrentQuestionIndex(prev => prev + 1);
         } 
         else {
-            setCurrentState("result");
+            setCurrentState("results");
         }
     };
 
@@ -51,7 +59,7 @@ const Quiz = ({ questions, topics }) => {
     const onTryAgain = () => {
         setUserAnswers(Array(questions.length).fill(null));
         setCurrentQuestionIndex(0);
-        setCurrentState("select-topic");
+        setCurrentState("select-topics");
     };
 
     const calculateScore = () => {
@@ -62,15 +70,11 @@ const Quiz = ({ questions, topics }) => {
 
     useEffect(() => {
         let interval;
-        let element = document.querySelector("#progress-bar");
         if (currentState === "quiz") {
             interval = setInterval(() => {
                 setTime(prevTime => {
-                    if (element) {
-                        prevTime > 0.75 * maxTime ? element.className = "hurry-up" : null;
-                    }
-                    if (prevTime === maxTime - 1) {
-                        setCurrentState("result");
+                    if (prevTime === maxTime) {
+                        setCurrentState("results");
                         clearInterval(interval);
                         return prevTime;
                     }
@@ -85,52 +89,63 @@ const Quiz = ({ questions, topics }) => {
     }, [currentState, maxTime]);
 
     return (
-        <div className="quiz-container">
-            { currentState === "welcome" && <Welcome onStart={() => setCurrentState("select-topic")} /> }
+        <div className="main-container">
+            <div className="content-container">
+            { currentState === "welcome" && (
+                <>
+                    <Welcome 
+                        onStart={() => setCurrentState("select-topics")} 
+                    />
+                </>
+            )}
     
-            { currentState === "select-topic" && (
-                <SelectTopics
-                    topics={topics}
-                    selectedTopics={selectedTopics}
-                    onTopicClick={onTopicClick}
-                    onBegin={() => setCurrentState("quiz")}
-                />
+            { currentState === "select-topics" && (
+                <>
+                    <SelectTopics
+                        topics={topics}
+                        selectedTopics={selectedTopics}
+                        onTopicClick={onTopicClick}
+                    />
+                </>
             )}
     
             { currentState === "quiz" && (
                 <>
-                    <progress id="progress-bar" max={maxTime} value={time}></progress>
-                    { questions[currentQuestionIndex].type === "multiple-choice" && 
-                        <MultipleChoiceQuestion
-                            question={questions[currentQuestionIndex]}
-                            onAnswer={onAnswer}
-                            onClickNext={onClickNext}
-                            onClickPrev={onClickPrev}
-                            userAnswers={userAnswers}
-                            currentQuestion={currentQuestionIndex}
-                            totalQuestions={questions.length} />
-                    }
-    
-                    { questions[currentQuestionIndex].type === "open" && 
-                        <OpenQuestion
-                            question={questions[currentQuestionIndex]}
-                            onAnswer={onAnswer}
-                            onClickNext={onClickNext}
-                            onClickPrev={onClickPrev}
-                            userAnswers={userAnswers}
-                            currentQuestion={currentQuestionIndex}
-                            totalQuestions={questions.length} />
-                    }
+                    <div className="progress-bar-bg"><div className="progress-bar"></div></div>
+                    <div className="quiz-progress">
+                        <span className="current-question-number">{currentQuestionIndex+1}</span><span className="total-question-number">/{questions.length}</span>
+                    </div>
+                    <Question
+                        question={questions[currentQuestionIndex]}
+                        onAnswer={onAnswer}
+                        userAnswers={userAnswers}
+                        currentQuestionIndex={currentQuestionIndex}
+                        totalQuestions={questions.length} 
+                    />
                 </>
             )}
     
-            { currentState === "result" && (
-                <Results
-                    score={calculateScore()}
-                    totalQuestions={questions.length}
-                    onTryAgain={onTryAgain}
-                />
+            { currentState === "results" && (
+                <>
+                    <Results
+                        score={calculateScore()}
+                        totalQuestions={questions.length}
+                    />
+                </>
             )}
+            </div>
+
+            <Buttons 
+                state={currentState}
+                selectedTopics={selectedTopics}
+                onStart={onStart}
+                onClickNext={onClickNext}
+                onClickPrev={onClickPrev}
+                onTryAgain={onTryAgain}
+                currentQuestionIndex={currentQuestionIndex}
+                totalQuestions={questions.length}
+                onBegin={onBegin}
+            />
         </div>
     );
 }
