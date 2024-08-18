@@ -4,6 +4,7 @@ import SelectTopics from "./select-topics.jsx";
 import Question from "./question.jsx";
 import Results from "./results.jsx";
 import Buttons from "./buttons.jsx";
+import Header from "./header.jsx";
 
 const Quiz = ({ questions, topics }) => {
     const [currentState, setCurrentState] = useState("welcome");
@@ -90,31 +91,26 @@ const Quiz = ({ questions, topics }) => {
 
     return (
         <div className="main-container">
+            <div className="header">
+                <Header 
+                    currentQuestionIndex={currentQuestionIndex}
+                    questions={questions}
+                    state={currentState}
+                />
+            </div>
+
             <div className="content-container">
-            { currentState === "welcome" && (
-                <>
-                    <Welcome 
-                        onStart={() => setCurrentState("select-topics")} 
-                    />
-                </>
-            )}
-    
-            { currentState === "select-topics" && (
-                <>
+                { currentState === "welcome" && <Welcome onStart={() => setCurrentState("select-topics")} />}
+        
+                { currentState === "select-topics" && (
                     <SelectTopics
                         topics={topics}
                         selectedTopics={selectedTopics}
                         onTopicClick={onTopicClick}
                     />
-                </>
-            )}
-    
-            { currentState === "quiz" && (
-                <>
-                    <div className="progress-bar-bg"><div className="progress-bar"></div></div>
-                    <div className="quiz-progress">
-                        <span className="current-question-number">{currentQuestionIndex+1}</span><span className="total-question-number">/{questions.length}</span>
-                    </div>
+                )}
+        
+                { currentState === "quiz" && (
                     <Question
                         question={questions[currentQuestionIndex]}
                         onAnswer={onAnswer}
@@ -122,30 +118,29 @@ const Quiz = ({ questions, topics }) => {
                         currentQuestionIndex={currentQuestionIndex}
                         totalQuestions={questions.length} 
                     />
-                </>
-            )}
-    
-            { currentState === "results" && (
-                <>
+                )}
+        
+                { currentState === "results" && (
                     <Results
                         score={calculateScore()}
                         totalQuestions={questions.length}
                     />
-                </>
-            )}
+                )}
             </div>
 
-            <Buttons 
-                state={currentState}
-                selectedTopics={selectedTopics}
-                onStart={onStart}
-                onClickNext={onClickNext}
-                onClickPrev={onClickPrev}
-                onTryAgain={onTryAgain}
-                currentQuestionIndex={currentQuestionIndex}
-                totalQuestions={questions.length}
-                onBegin={onBegin}
-            />
+            <div className="footer">
+                <Buttons 
+                    state={currentState}
+                    selectedTopics={selectedTopics}
+                    onStart={onStart}
+                    onClickNext={onClickNext}
+                    onClickPrev={onClickPrev}
+                    onTryAgain={onTryAgain}
+                    currentQuestionIndex={currentQuestionIndex}
+                    totalQuestions={questions.length}
+                    onBegin={onBegin}
+                />
+            </div>
         </div>
     );
 }

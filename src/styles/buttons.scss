@@ -1,18 +1,11 @@
 @import "colors.scss";
 
-.footer {
-    display: flex;
-    gap: 5%;
-    justify-content: center;
-}
-
 button {
     cursor: pointer;
     width: max-content;
     min-width: 100px;
     background-color: $bg-primary;
     color: $primary;
-    margin-top: 1.5vh;
     padding: 1.5vh;
     border-radius: 8px;
     border: $bg-primary 1px solid;
