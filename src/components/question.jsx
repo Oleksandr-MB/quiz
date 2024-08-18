@@ -5,17 +5,19 @@ const Question = ({ question, onAnswer, userAnswers, currentQuestionIndex }) => 
         <span className="question-text">{question.text}</span>
 
         { question.type === "multiple-choice" &&
-            <ul>
-                { question.choices.map((choice) => (
-                    <li 
-                        key={choice}
-                        onClick={() => onAnswer(choice)}
-                        className={userAnswers[currentQuestionIndex] === choice ? "selected-answer" : null}
-                    >
-                        {choice}
-                    </li>
-                ))}
-            </ul>
+            <div className="scroll">
+                <ul>
+                    { question.choices.map((choice) => (
+                        <li 
+                            key={choice}
+                            onClick={() => onAnswer(choice)}
+                            className={userAnswers[currentQuestionIndex] === choice ? "selected-answer" : null}
+                        >
+                            {choice}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         }
 
         { question.type === "open" &&

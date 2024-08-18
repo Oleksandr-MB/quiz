@@ -1,7 +1,7 @@
 @import "colors.scss";
 
 .quiz-progress {
-    margin-bottom: 2vh;
+    margin-bottom: 2%;
 
     .current-question-number {
         font-weight: bold;
@@ -16,12 +16,13 @@
 }
 
 .progress-bar-bg {
-    margin-bottom: 5vh;
+    margin-bottom: 5%;
     position: relative;
-    height: 0.5vh;
+    height: 1%;
+    min-height: 5px;
     width: 100%;
     background: linear-gradient(90deg,blue, red);
-    margin-bottom: 2vh;
+    margin-bottom: 2%;
 
     .progress-bar {
         transform-origin: right;

@@ -22,24 +22,40 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll {
+    max-height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.header, .content, .footer {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .header {
+    height: 10%;
     font-size: large;
     font-weight: bolder;
     margin: 2%;
 }
 
 .content {
+    height: 80%;
     margin: 0 2%;
     flex-grow: 1;
 }
 
 .footer {
-    margin: 2%;
     display: flex;
-    gap: 5%;
     justify-content: center;
+    gap: 5%;
+    height: 10%;
+    margin: 2%;
 }
 
 @media only screen and (max-width: 1400px) {

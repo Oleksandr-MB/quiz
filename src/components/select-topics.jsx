@@ -1,7 +1,7 @@
 import React from "react";
 
 const SelectTopics = ({ topics, selectedTopics, onTopicClick }) => (
-    <>
+    <div className="scroll">
         <ul className="select-topics">
             {topics.map((topic) => (
                 <li
@@ -13,7 +13,7 @@ const SelectTopics = ({ topics, selectedTopics, onTopicClick }) => (
                 </li>
             ))}
         </ul>
-    </>
+    </div>
 );
 
 export default SelectTopics;
