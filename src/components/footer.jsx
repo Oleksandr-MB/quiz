@@ -1,6 +1,6 @@
 import React from "react";
 
-const Buttons = ({ state, currentQuestionIndex, totalQuestions, onStart, onClickNext, onClickPrev, onTryAgain, onBegin, selectedTopics }) => (
+const Footer = ({ state, currentQuestionIndex, totalQuestions, onStart, onClickNext, onClickPrev, onTryAgain, onBegin, selectedTopics }) => (
     <>
         { state === "welcome" && <button className="btn-start" onClick={onStart}>Start Quiz</button> }
         { state === "select-topics" && <button disabled={selectedTopics.length === 0} className="btn-start" onClick={onBegin}>Begin</button> }
@@ -14,4 +14,4 @@ const Buttons = ({ state, currentQuestionIndex, totalQuestions, onStart, onClick
     </>
 )
 
-export default Buttons;
+export default Footer;

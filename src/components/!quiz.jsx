@@ -3,7 +3,7 @@ import Welcome from "./welcome.jsx";
 import SelectTopics from "./select-topics.jsx";
 import Question from "./question.jsx";
 import Results from "./results.jsx";
-import Buttons from "./buttons.jsx";
+import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 
 const Quiz = ({ questions, topics }) => {
@@ -99,7 +99,7 @@ const Quiz = ({ questions, topics }) => {
                 />
             </div>
 
-            <div className="content-container">
+            <div className="content">
                 { currentState === "welcome" && <Welcome onStart={() => setCurrentState("select-topics")} />}
         
                 { currentState === "select-topics" && (
@@ -129,7 +129,7 @@ const Quiz = ({ questions, topics }) => {
             </div>
 
             <div className="footer">
-                <Buttons 
+                <Footer 
                     state={currentState}
                     selectedTopics={selectedTopics}
                     onStart={onStart}
