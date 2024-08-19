@@ -1,7 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.scss'
-import Quiz from './components/!quiz.jsx'
-import { quizQuestions, quizTopics } from "./constants";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import App from "./components/app.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Quiz questions = {quizQuestions.questions} topics = {quizTopics.topics}/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

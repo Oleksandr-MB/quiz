@@ -1,0 +1,39 @@
+@import "colors.scss";
+
+.popup {
+    display: block;
+    position: fixed; // Changed from absolute to fixed
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $selected;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: $primary;
+    padding: 20px;
+    border: 1px solid $border;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px; 
+}
+
+.close {
+    color: $border;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: $normal-text;
+    text-decoration: none;
+    cursor: pointer;
+}
