@@ -14,7 +14,8 @@ const Footer = ({ state, question, currentQuestionIndex, totalQuestions, selecte
         setPopUp(false);
         if (currentQuestionIndex < totalQuestions - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
-        } else {
+        } 
+        else {
             setCurrentState("results");
         }
     };
@@ -33,11 +34,11 @@ const Footer = ({ state, question, currentQuestionIndex, totalQuestions, selecte
 
     return (
         <>
-            {state === "select-topic" && <button disabled={selectedTopic === null} className="btn-start" onClick={onBegin}>Begin</button>}
-            {state === "quiz" && <button onClick={onClickNext}>{currentQuestionIndex === totalQuestions - 1 ? "Finish" : "Confirm"}</button>}
-            {state === "results" && <button onClick={onClickExit}>Exit</button>}
+            { state === "select-topic" && <button disabled={selectedTopic === null} className="btn-start" onClick={onBegin}>Begin</button> }
+            { state === "quiz" && <button onClick={onClickNext}>{currentQuestionIndex === totalQuestions - 1 ? "Finish" : "Confirm"}</button> }
+            { state === "results" && <button onClick={onClickExit}>Exit</button> }
 
-            {showPopUp && (
+            { showPopUp && (
                 <div className="popup">
                     <div className="popup-content">
                         <span className="close" onClick={closePopUp}>×</span>

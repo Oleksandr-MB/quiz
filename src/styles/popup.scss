@@ -2,7 +2,7 @@
 
 .popup {
     display: block;
-    position: fixed; // Changed from absolute to fixed
+    position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
@@ -14,13 +14,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2vh;
 }
 
 .popup-content {
     background-color: $primary;
-    padding: 20px;
+    padding: 1%;
     border: 1px solid $border;
     width: 80%;
+    height: 45%;
     max-width: 600px;
     border-radius: 8px; 
 }

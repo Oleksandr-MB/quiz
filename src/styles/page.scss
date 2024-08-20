@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-size: 150%;
+}
+
 .main-container {
     height: 70vh;
     width: 50vw;
@@ -24,6 +28,7 @@ body {
     justify-content: space-between;
     overflow-y: auto;
     overflow-x: hidden;
+    font-size: 110%;
 }
 
 .scroll {

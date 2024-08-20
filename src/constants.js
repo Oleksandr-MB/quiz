@@ -6,7 +6,7 @@ questions : [
     text: "Question 1",
     choices: [
       "A",
-      "B",
+      "A",
       "C",
       "D",
     ],
