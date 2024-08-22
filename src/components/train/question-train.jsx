@@ -11,26 +11,24 @@ const Question = ({ question, userAnswer, setUserAnswer }) => {
     
     const closePopUp = () => {
         setPopUp(false);
-    };
+    };    
 
     return (
         <>
             <span className="question-text"><Latex>{question.text}</Latex></span>
 
-            { question.type === "multiple-choice" && (
-                <div className="scroll">
-                    <ul>
-                        { question.choices.map((choice, index) => (
-                            <li
-                                key={index}
-                                onClick={() => onAnswer(choice)}
-                                className={userAnswer === choice ? "selected-answer" : null}
-                            >
-                                <Latex>{choice}</Latex>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            { question.type === "mc" && (
+                <ul className="select-answer">
+                    { question.options.map((option, index) => (
+                        <li
+                            key={index}
+                            onClick={() => onAnswer(option)}
+                            className={userAnswer === option ? "selected-answer" : null}
+                        >
+                            <Latex>{option}</Latex>
+                        </li>
+                    ))}
+                </ul>
             )}
 
             { question.type === "open" && (

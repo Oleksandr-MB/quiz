@@ -31,12 +31,6 @@ h2 {
     font-size: 110%;
 }
 
-.scroll {
-    max-height: 90%;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
 .header, .content, .footer {
     max-height: 100%;
     max-width: 100%;
@@ -53,6 +47,8 @@ h2 {
     height: 80%;
     margin: 0 2%;
     flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .footer {

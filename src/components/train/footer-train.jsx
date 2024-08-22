@@ -14,6 +14,10 @@ const Footer = ({ state, question, currentQuestionIndex, totalQuestions, selecte
         setPopUp(false);
         if (currentQuestionIndex < totalQuestions - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
+            let selectedAnswer = document.querySelector(".selected-answer");
+            if (selectedAnswer) {
+                selectedAnswer.className = null;
+            }
         } 
         else {
             setCurrentState("results");

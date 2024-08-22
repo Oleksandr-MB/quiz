@@ -1,4 +1,5 @@
 import React from "react";
+import Latex from "react-latex";
 
 const Results = ({ userAnswers, questions, totalQuestions }) => {
     const calculateScore = () => {
@@ -11,8 +12,19 @@ const Results = ({ userAnswers, questions, totalQuestions }) => {
     
     return (
         <>
-            <span>{calculateScore()}/{totalQuestions}</span>
-        </>
+            <div><span className="current-question-number">{calculateScore()}/{totalQuestions}</span></div>
+            <ol>
+                { questions.map((question, index) => (
+                    <li
+                        key={index}
+                    >
+                        <Latex>{question.text}</Latex><br/>
+                        Your answer: <Latex>{userAnswers[index]}</Latex><br/>
+                        Correct answer: <Latex>{question.correctAnswer}</Latex><br/>
+                    </li>
+                ))}   
+            </ol>
+\        </>
     )
 };
 

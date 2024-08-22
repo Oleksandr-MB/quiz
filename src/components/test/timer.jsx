@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 const Timer = ({ questions, currentState, setCurrentState, setTime }) => {
-    const maxTime = questions.filter((q) => q.type === "multiple-choice").length * 5 + questions.filter((q) => q.type === "open").length * 10;
+    const maxTime = 60;
     const progressBar = document.querySelector(".progress-bar");
     if (progressBar) {
         progressBar.style.setProperty("--maxTime", `${maxTime}s`);

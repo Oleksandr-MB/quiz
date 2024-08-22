@@ -1,11 +1,11 @@
 @import "colors.scss";
 
-ul {
+.select-topics, .select-answer {
     margin-top: 1%;
     padding-left: 0;
 }
 
-ul li {
+.select-topics li, .select-answer li {
     text-decoration: none;
     list-style: none;
     color: $normal-text;
@@ -16,12 +16,12 @@ ul li {
     padding: 2%;
 }
 
-ul li.selected-topic, ul li.selected-answer {
+.select-topics li.selected-topic, .select-answer li.selected-answer {
     background-color: $selected;
     font-weight: bold;
 }
 
-ul li:hover {
+.select-topics li:hover, .select-answer li:hover {
     background-color: $hovered-over;
     font-weight: bold;
 }

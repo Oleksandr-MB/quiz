@@ -2,7 +2,7 @@ import React from "react";
 import Timer from "./timer.jsx";
 const Header = ({ questions, currentState, totalQuestions, currentQuestionIndex, setCurrentState, setTime }) => (
     <>
-        { currentState === "select-topics" && <h2>Select topics</h2> }
+        { currentState === "select-topic" && <h2>Select topics</h2> }
         { currentState === "quiz" && (
             <>
                 <Timer 

@@ -1,21 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./header-test.jsx";
 import Footer from "./footer-test.jsx";
 import SelectTopics from "./topics-test.jsx";
 import Question from "./question-test.jsx";
 import Results from "./results-test.jsx";
-import { quizQuestions, quizTopics } from "../../constants.js";
-
+import { quizTopics } from "../../constants.js";
+ 
 const TestApp = ({ setCurrentMode }) => {
-    const topics = quizTopics.topics;
-    const questions = quizQuestions.questions;
-    
-    const [currentState, setCurrentState] = useState("select-topics");
+    const topics = quizTopics.topics;    
+    const [currentState, setCurrentState] = useState("select-topic");
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState([]);
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [time, setTime] = useState(0);
+    const [questions, setQuestions] = useState([]);
 
+    useEffect(() => {
+        const fetchQuestions = async () => {
+            try {
+                const response = await fetch("https://66c64791134eb8f43497440d.mockapi.io/api/quizquestions");
+                const data = await response.json();
+                setQuestions(data);
+            } 
+            catch (error) {
+                console.error("Error fetching questions:", error);
+            }
+        };
+        fetchQuestions();
+    }, []);
+    
     return (
         <div className="main-container">
             <div className="header">
@@ -30,7 +43,7 @@ const TestApp = ({ setCurrentMode }) => {
             </div>
 
             <div className="content">
-                { currentState === "select-topics" &&
+                { currentState === "select-topic" &&
                     <SelectTopics
                         topics={topics}
                         selectedTopics={selectedTopics}

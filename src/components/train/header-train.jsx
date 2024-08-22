@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ questions, currentState, totalQuestions, currentQuestionIndex, setCurrentState }) => (
+const Header = ({ currentState, totalQuestions, currentQuestionIndex }) => (
     <>
         { currentState === "select-topic" && <h2>Select topics</h2> }
         { currentState === "quiz" && (
@@ -9,9 +9,7 @@ const Header = ({ questions, currentState, totalQuestions, currentQuestionIndex,
             </div>
         )}
         { currentState === "results" && (
-            <>
-                <h2>Recap</h2> 
-            </>
+            <h2>Recap</h2> 
         )}
     </>
 )

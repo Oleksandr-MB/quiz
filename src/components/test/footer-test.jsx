@@ -19,7 +19,7 @@ const Footer = ({ state, currentQuestionIndex, totalQuestions, selectedTopics, s
     const onClickExit = () => {
         setUserAnswers(Array(totalQuestions).fill(null));
         setCurrentQuestionIndex(0);
-        setCurrentState("select-topics");
+        setCurrentState("select-topic");
         setCurrentMode(null);
     };
 
@@ -27,7 +27,7 @@ const Footer = ({ state, currentQuestionIndex, totalQuestions, selectedTopics, s
 
     return (
         <>
-            { state === "select-topics" && <button disabled={selectedTopics.length === 0} className="btn-start" onClick={onBegin}>Begin</button> }
+            { state === "select-topic" && <button disabled={selectedTopics.length === 0} className="btn-start" onClick={onBegin}>Begin</button> }
             { state === "quiz" && (
                 <>
                     <button onClick={onClickPrev} disabled={currentQuestionIndex === 0}>Previous</button>
