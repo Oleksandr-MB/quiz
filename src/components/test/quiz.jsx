@@ -5,7 +5,7 @@ import { questions } from "../../constants.js";
 const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnswer, topic, state, setState }) => {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [time, setTime] = useState(0);
-    const maxTime = 15*60;
+    const maxTime = 20*60;
 
     const progressBar = document.querySelector(".progress-bar");
     if (progressBar) progressBar.style.setProperty("--maxTime", `${maxTime}s`);
