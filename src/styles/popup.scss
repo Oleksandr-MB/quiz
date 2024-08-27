@@ -8,7 +8,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: $transperent-darker-blue;
     border-radius: 8px;
     display: flex;
@@ -25,6 +24,8 @@
     height: 45%;
     max-width: 600px;
     border-radius: 8px; 
+    font-size: 14px;
+    overflow: auto;
 }
 
 .close {
