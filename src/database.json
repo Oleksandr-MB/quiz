@@ -1,0 +1,193 @@
+[
+    {
+        "id": 1,
+        "text": "What does it mean \"the system has a trivial solution\"?",
+        "type": "MC",
+        "answerOptions": [
+            "All leading variables in the solution are 0",
+            "The system has a single solution",
+            "The linear structures that represented by the equations are intersecting in the origin"
+        ],
+        "correctAnswer": [
+            "All leading variables in the solution are 0",
+            "The linear structures that represented by the equations are intersecting in the origin"
+        ],
+        "solution": "Both correct answers are equivalent",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 2,
+        "text": "Is $$(x, y) = (3, 0)$$ a solution of this system? $$\\begin{cases} 2x + 3y = 5 \\\\ 4x - y = 1 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "No"
+        ],
+        "solution": "$$(x, y) = (3, 0)$$ it's a solution only of the first of the two equations",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 3,
+        "text": "Consider the equation $$x + y + 1 = 0$$.",
+        "type": "MC",
+        "answerOptions": [
+            "This equation is linear",
+            "This equation is homogeneous",
+            "This equation is consistent",
+            "This equation is inconsistent"
+        ],
+        "correctAnswer": [
+            "This equation is linear",
+            "This equation is homogeneous"
+        ],
+        "solution": "It is linear as all the leading variables are in the power of 1 and it is homogeneous as the constant term is 0",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 4,
+        "text": "The following linear system is $$\\begin{cases} 2x + 3y = 5 \\\\ 4x - y = 1 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "Consistent and homogeneous",
+            "Inconsistent and not homogeneous",
+            "Consistent and not homogeneous",
+            "Inconsistent and homogeneous"
+        ],
+        "correctAnswer": [
+            "Consistent and not homogeneous"
+        ],
+        "solution": "The system has a single solution $$(x, y) = (\\frac{4}{7}, \\frac{9}{7})$$, so it is consistent and the constant terms are not 0.",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 5,
+        "text": "An equation corresponds to a ...",
+        "type": "MC",
+        "answerOptions": [
+            "Row of the matrix",
+            "Column of the matrix"
+        ],
+        "correctAnswer": [
+            "Row"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 6,
+        "text": "Each row of the augmented matrix corresponds to an equation of the linear system",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 7,
+        "text": "Each column of the augmented matrix corresponds to an equation of the linear system",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 8,
+        "text": "What is the correct solution of the linear system $$\\begin{cases} 6x-4y+2z = 3 \\\\ 6x-4y+2z = 2 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "$$(x, y, z) = (\\frac{1}{6}+\\frac{2}{3}t, t, 1)$$",
+            "$$(x, y, z) = (1, 2, 1)$$",
+            "$$(x, y, z) = (\\frac{1}{3}+\\frac{2}{3}t, t, \\frac{1}{2})$$",
+            "It does not have a real solution"
+        ],
+        "correctAnswer": [
+            "It does not have a real solution"
+        ],
+        "solution": "The equations are identical in everything but constant term, so the lines do not intersect",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 9,
+        "text": "What is the correct solution of the linear system $$\\begin{cases} -2x + y = 3 \\\\ 3x - y = 1 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "$$(x, y) = (-4, 11)$$",
+            "$$(x, y) = (5, -1)$$",
+            "$$(x, y) = (4, 11)$$",
+            "It does not have a real solution"
+        ],
+        "correctAnswer": [
+            "$$(x, y) = (4, 11)$$"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 10,
+        "text": "Select correct matrix, representing the linear system $$\\begin{cases} 2y+z-1 = -x \\\\ 2z = 3-5z \\\\ 3x+z = 0 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 5 & 2 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & -1 \\\\ 0 & 5 & 2 &\\bigm| & -3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$"
+        ],
+        "correctAnswer": [
+            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 5 & 2 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 11,
+        "text": "Select correct statement(s):",
+        "type": "MC",
+        "answerOptions": [
+            "In the solution set we express the leading variables in terms of the free variables",
+            "In the solution set we express the free variables in terms of the leading variables"
+        ],
+        "correctAnswer": [
+            "In the solution set we express the leading variables in terms of the free variables"
+        ],
+        "solution": "In the solution set, we express the leading variables in terms of the free variables. This is because the free variables can take any value, and the leading variables are dependent on these values.",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 12,
+        "text": "Select correct statement(s):",
+        "type": "MC",
+        "answerOptions": [
+            "A parameter is assigned to all of the free variables",
+            "A parameter is assigned to all of the leading variables"
+        ],
+        "correctAnswer": [
+            "In the solution set we express the leading variables in terms of the free variables. This is because the free variables can take any value, and the leading variables are dependent on these values."
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    }
+]

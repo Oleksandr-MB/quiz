@@ -1,8 +1,8 @@
 @import "colors.scss";
 
 body {
-    background: linear-gradient($bg-primary, $bg-secondary);
-    color: $normal-text;
+    background: $darker-blue;
+    color: $light-blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ h2 {
     height: 70vh;
     width: 50vw;
     font-family: monospace;
-    background: $primary;
+    background: $dark-blue;
     border-radius: 16px;
     padding: 2% 3%;
     box-sizing: border-box;
@@ -29,6 +29,18 @@ h2 {
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 110%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.question-text {
+    font-size: 18px;
+    color: $green;
+    margin-bottom: 5%;
+    line-height: 125%;
+}
+
+.header-text {
+    color: $orange;
 }
 
 .header, .content, .footer {
@@ -64,6 +76,24 @@ h2 {
         height: 75vh;
         width: 60vw;
     }
+
+    .question-text {
+        font-size: 17px;
+        color: $green;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container {
+        height: 80vh;
+        width: 70vw;
+    }
+    .question-text {
+        font-size: 16px;
+        color: $green;
+        margin-bottom: 5%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -71,12 +101,11 @@ h2 {
         height: 80vh;
         width: 70vw;
     }
-}
 
-@media only screen and (max-width: 1200px) {
-    .main-container {
-        height: 85vh;
-        width: 80vw;
+    .question-text {
+        font-size: 15px;
+        color: $green;
+        margin-bottom: 5%;
     }
 }
 
@@ -85,12 +114,12 @@ h2 {
         height: 90vh;
         width: 90vw;
     }
-}
 
-.question-text {
-    margin-bottom: 5%;
-    font-size: 1.5em;
-    font-weight: bold;
+    .question-text {
+        font-size: 14px;
+        color: $green;
+        margin-bottom: 5%;
+    }
 }
 
 .answer-input {

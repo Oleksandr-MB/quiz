@@ -1,0 +1,31 @@
+@import "./colors.scss";
+.recap {
+    font-size: 13px;
+    line-height: 115%;
+}
+
+.results {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+br {
+    margin: 2em;
+    display: block;
+    font-size: 25%;
+}
+
+.question-recap {
+    color: $green;
+}
+
+.answer-recap {
+    color: $orange;
+}
+
+.line {
+    background-color: $blue;
+    height: 1.75px;
+    width: 100%;
+    margin-bottom: 2%;
+}

@@ -1,3 +1,6 @@
-//To be changed to a backend call
+import questions from "./database.json";
 
-export const quizTopics = { topics : ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"] };
+const topics = Array.from(new Set(questions.map((question) => question.topic)));
+const subTopics = Array.from(new Set(questions.map((question) => question.subTopic)));
+
+export { questions, topics, subTopics };

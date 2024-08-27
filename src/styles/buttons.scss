@@ -2,11 +2,11 @@
 
 button {
     cursor: pointer;
-    background-color: $bg-primary;
-    color: $primary;
+    background-color: $dark-blue;
+    color: $blue;
     padding: 1%;
     border-radius: 2rem;
-    border: $bg-primary 1px solid;
+    border: $blue 1px solid;
     text-align: center;
     width: 17.5%;
     height: 80%;
@@ -43,13 +43,14 @@ button {
 
 button:disabled {
     cursor: not-allowed;
-    color: $bg-secondary;
-    border-color: $border;
-    background-color: $disabled;
+    color: $darker-blue;
+    border-color: $red;
+    background-color: $red;
 }
 
 button:hover:not(:disabled) {
-    background-color: $selected;
+    background-color: $green;
     font-weight: bold;
-    color: $bg-primary;
+    color: $darker-blue;
+    border: $green 1px solid;
 }

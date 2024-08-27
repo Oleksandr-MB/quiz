@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import WelcomePage from "./welcome-page.jsx";
-import TestApp from "./test/app-test.jsx";
-import TrainApp from "./train/app-train.jsx";
+import WelcomePage from "./welcome.jsx";
+import TestApp from "./test/test.jsx";
+import TrainApp from "./train/train.jsx";
 
 const App = () => {
-    const [currentMode, setCurrentMode] = useState(null);
+    const [mode, setMode] = useState("welcome");
     return (
         <>
-            { currentMode === null && <WelcomePage setCurrentMode={setCurrentMode} /> }
-            { currentMode === "test" && <TestApp setCurrentMode={setCurrentMode} /> }
-            { currentMode === "train" && <TrainApp setCurrentMode={setCurrentMode} /> }
+            {mode === "welcome" && <WelcomePage setMode={setMode} />}
+            {mode === "test" && <TestApp setMode={setMode} />}
+            {mode === "train" && <TrainApp setMode={setMode} />}
         </>
     );
 }

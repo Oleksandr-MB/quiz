@@ -1,27 +1,66 @@
 @import "colors.scss";
 
-.select-topics, .select-answer {
+ul {
+    font-size: 16px;
+}
+
+ul[class ^= select] {
     margin-top: 1%;
     padding-left: 0;
 }
 
-.select-topics li, .select-answer li {
+ul[class ^= select] li {
     text-decoration: none;
     list-style: none;
-    color: $normal-text;
+    color: $light-blue;
     cursor: pointer;
-    border: 1px solid $border;
-    border-radius: 2px;
-    margin-top: 2%;
-    padding: 2%;
+    border: 1px solid $blue;
+    border-radius: 8px;
+    margin-top: 2.5%;
+    padding: 1.5%;
 }
 
-.select-topics li.selected-topic, .select-answer li.selected-answer {
-    background-color: $selected;
+ul[class ^= select] li.selected {
+    background-color: $blue;
     font-weight: bold;
+    color: $darker-blue;
 }
 
-.select-topics li:hover, .select-answer li:hover {
-    background-color: $hovered-over;
+ul[class ^= select] li:hover {
+    background-color: $blue;
     font-weight: bold;
+    color: $darker-blue;
+}
+
+.list {
+    text-decoration: none;
+    list-style: none;
+    font-size: large;
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+}
+
+@media only screen and (max-width: 1400px) {
+    .select-answer {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .select-answer {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .select-answer {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .select-answer {
+        font-size: 12px;
+    }
 }
