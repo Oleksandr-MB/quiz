@@ -13,7 +13,7 @@ const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnsw
     const shuffle = (array) => {
         let currentIndex = array.length;
         while (currentIndex !== 0) {
-            let randomIndex = Math.floor(Math.random()*currentIndex);
+            let randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
             [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
         }
@@ -49,17 +49,19 @@ const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnsw
                     return prevTime + 1;
                 });
             }, 1000);
-        } 
-        else {
+        } else {
             setTime(0);
         }
         return () => clearInterval(interval);
     }, [state, setState]);
 
-    const handleAnswerClick = (option) => {
-        const updatedAnswers = [...userAnswer];
-        updatedAnswers[questionIndex] = [option];
-        setUserAnswer(updatedAnswers);
+    const onAnswer = (newOption) => {
+        setUserAnswer(prev => {
+            const updatedAnswers = [...prev];
+            const currentAnswers = updatedAnswers[questionIndex];
+            updatedAnswers[questionIndex] = currentAnswers.includes(newOption) ? currentAnswers.filter(option => option !== newOption) : [...currentAnswers, newOption];
+            return updatedAnswers;
+        });
     };
 
     if (filteredQuestions.length === 0) return <div className="main-container">Loading...</div>;
@@ -79,7 +81,7 @@ const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnsw
                     {filteredQuestions[questionIndex].answerOptions.map((option, index) => (
                         <li
                             key={index}
-                            onClick={() => handleAnswerClick(option)}
+                            onClick={() => onAnswer(option)}
                             className={userAnswer[questionIndex].includes(option) ? "selected" : null}
                         >
                             <Latex>{option}</Latex>
