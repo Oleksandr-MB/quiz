@@ -1,15 +1,15 @@
 import React from "react";
 
-const WelcomePage = ({ setMode }) => (
+const WelcomePage = ({setMode}) => (
     <div className="main-container">
         <div className="header">
-            <h2 className="header-text">Welcome to the quiz</h2>
+            <h1 className="header-text">Welcome to the quiz</h1>
         </div>
         <div className="content">
-            <h3>Rules:</h3>
+            <h2>Rules:</h2>
             <ul className="list">
                 <li>In <strong>Training Mode</strong>, questions are split into many small subtopics and are not mixed.<br/></li>
-                <li>In <strong>Test Mode</strong>, questions cover whole topics and are shuffled. Youu will have 20 minutes solve 15 questions.</li>
+                <li>In <strong>Test Mode</strong>, questions cover whole topics and are shuffled. You will have 20 minutes solve 15 questions.</li>
             </ul>
             <h2>Good luck!</h2>
         </div>

@@ -29,7 +29,7 @@ const Result = ({filteredQuestions, userAnswer, setMode, setState}) => {
 
     return (
         <div className="main-container">
-            <div className="header"><h2 className="header-text">Score</h2></div>
+            <div className="header"><h1 className="header-text">Score</h1></div>
             <div className="content">
                 <p className="result">
                     Your score: {result.totalScore}/{filteredQuestions.length}<br/>

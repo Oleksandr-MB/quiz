@@ -5,7 +5,7 @@ const SelectTopic = ({setState, topic, setTopic}) => {
     
     return (
         <div className="main-container">
-            <div className="header"><h2 className="header-text">Select the topic</h2></div>
+            <div className="header"><h1 className="header-text">Select the topic</h1></div>
             <div className="content">
                 <ul className="select-topic">
                     {topics.map((tpc) => (

@@ -4,7 +4,7 @@ import Latex from "react-latex";
 const Result = ({filteredQuestions, setMode, setState}) => {
     return (
         <div className="main-container">
-            <div className="header"><h2 className="header-text">Recap</h2></div>
+            <div className="header"><h1 className="header-text">Recap</h1></div>
             <div className="content">
                 <ol className="recap">
                     {filteredQuestions.map((question) => ( 
