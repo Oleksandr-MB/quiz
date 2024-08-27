@@ -9,7 +9,7 @@ const WelcomePage = ({ setMode }) => (
             <h3>Rules:</h3>
             <ul className="list">
                 <li>In <strong>Training Mode</strong>, questions are split into many small subtopics and are not mixed.<br/></li>
-                <li>In <strong>Test Mode</strong>, questions cover whole topics and are mixed. There is a 20-minute time limit to solve 15 questions in Test Mode.</li>
+                <li>In <strong>Test Mode</strong>, questions cover whole topics and are shuffled. Youu will have 20 minutes solve 15 questions.</li>
             </ul>
             <h2>Good luck!</h2>
         </div>
