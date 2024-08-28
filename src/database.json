@@ -189,5 +189,573 @@
         "solution": "",
         "topic": "Linear systems",
         "subTopic": "Basics"
+    },
+    {
+        "id": 13,
+        "text": "Which of the following operations can be performed to the augmented matrix of a linear system while solving the system?",
+        "type": "MC",
+        "answerOptions": [
+            "Multiplying a row by any scalar",
+            "Multiplying a row by a non-zero scalar",
+            "Add a row to a different row",
+            "Add a row to itself",
+            "Add to a row a multiple of a different row",
+            "Add to a row a multiple of itself",
+            "Swap two rows",
+            "Permute the rows"
+        ],
+        "correctAnswer": [
+            "Multiplying a row by a non-zero scalar",
+            "Add a row to a different row",
+            "Add a row to itself",
+            "Add to a row a multiple of a different row",
+            "Swap two rows",
+            "Permute the rows"
+        ],
+        "solution": "All the options are correct apart from the first and sixth as we cannot multiply a row by 0 and we cannot (in general case) add to a row a multiple of itself, as it might nullify the row.",
+        "topic": "Linear systems",
+        "subTopic": "Row and column operations"
+    },
+    {
+        "id": 14,
+        "text": "Can we perform elementary column operations to the augmented matrix of a linear system while solving the system in the canonical way?",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "No"
+        ],
+        "solution": "The columns are assigned to variables and hence, for example, we are not allowed to permute them. Note: technically we can permute the columns, but beware that it would change the order of variables, leading to another answer tuple, so it is HIGHLY discouraged.",
+        "topic": "Linear systems",
+        "subTopic": "Row and column operations"
+    },
+    {
+        "id": 15,
+        "text": "In row echelon form, the first entry in each non-zero row is always 1.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "The first entry in each non-zero row is called the leading entry, and it is not necessarily 1.",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 16,
+        "text": "Which of the following statements is true about the row echelon form of a matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "Every row has a leading 1",
+            "The leading entry of each non-zero row is 1",
+            "The leading entry of each non-zero row is to the right of the leading entry of the previous row",
+            "All entries below a leading entry are zero"
+        ],
+        "correctAnswer": [
+            "The leading entry of each non-zero row is to the right of the leading entry of the previous row",
+            "All entries below a leading entry are zero"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 17,
+        "text": "In row echelon form, the number of non-zero rows is equal to the number of leading variables.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 18,
+        "text": "In row echelon form, the leading entry of each non-zero row is to the ____ of the leading entry of the previous row.",
+        "type": "MC",
+        "answerOptions": [
+            "Right",
+            "Left"
+        ],
+        "correctAnswer": [
+            "Right"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 19,
+        "text": "Row echelon form and reduced row echelon form are...",
+        "type": "MC",
+        "answerOptions": [
+            "Both unique for each matrix",
+            "Neither of them is unique",
+            "Only reduced row echelon form is unique",
+            "Only row echelon form is unique"
+        ],
+        "correctAnswer": [
+            "Only reduced row echelon form is unique"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 20,
+        "text": "The number of leading variables is equal to the number of non-zero rows in the row echelon form.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Free/Leading variables"
+    },
+    {
+        "id": 21,
+        "text": "If all variables are leading, the system has a unique solution.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Free/Leading variables"
+    },
+    {
+        "id": 22,
+        "text": "We express the leading variables as a sum of multiples of the free variables and possibly a constant term.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Free/Leading variables"
+    },
+    {
+        "id": 23,
+        "text": "How many linear equations are required to define a line in \\(\\mathbb{R}^3\\)?",
+        "type": "MC",
+        "answerOptions": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correctAnswer": [
+            "2"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Lines and planes"
+    },
+    {
+        "id": 24,
+        "text": "In \\(\\mathbb{R}^2\\), the equation \\(0x + 0y = 0\\) represents a line.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Lines and planes"
+    },
+    {
+        "id": 25,
+        "text": "In \\(\\mathbb{R}^2\\), the solution set to a linear equation can be:",
+        "type": "MC",
+        "answerOptions": [
+            "A unit circle",
+            "A half-plane",
+            "An empty set",
+            "The whole plane",
+            "A line",
+            "A single point"
+        ],
+        "correctAnswer": [
+            "An empty set",
+            "A line",
+            "A single point",
+            "The whole plane"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Lines and planes"
+    },
+    {
+        "id": 26,
+        "text": "The lines represented by the following linear system are: \\(\\begin{cases} -4x + 2y = 3 \\\\ 2x + 7y = -2 \\end{cases}\\)",
+        "type": "MC",
+        "answerOptions": [
+            "Perpendicular",
+            "Parallel",
+            "Both",
+            "Neither parallel nor perpendicular"
+        ],
+        "correctAnswer": [
+            "Perpendicular"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Lines and planes"
+    },
+    {
+        "id": 27,
+        "text": "Summing two solutions of an inhomogeneous linear system gives a solution of the inhomogeneous linear system.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Sums"
+    },
+    {
+        "id": 28,
+        "text": "Summing two solutions of a homogeneous linear system gives a solution of the homogeneous linear system.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Sums"
+    },
+    {
+        "id": 29,
+        "text": "Summing a solution of an inhomogeneous linear system and a solution of the corresponding homogeneous linear system gives a solution of the:",
+        "type": "MC",
+        "answerOptions": [
+            "Inhomogeneous linear system",
+            "Homogeneous linear system"
+        ],
+        "correctAnswer": [
+            "Inhomogeneous linear system"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Sums"
+    },
+    {
+        "id": 30,
+        "text": "The order of the elementary row operations matters.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Elementary Row Operations"
+    },
+    {
+        "id": 31,
+        "text": "Performing elementary row operations changes the equations but not the common solutions.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Elementary Row Operations"
+    },
+    {
+        "id": 32,
+        "text": "Removing a zero row or column affects the solution set.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Elementary Row Operations"
+    },
+    {
+        "id": 33,
+        "text": "If the row echelon form has a leading 1 in the last column, the system is not solvable.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Elementary Row Operations"
+    },
+    {
+        "id": 34,
+        "text": "Is there a bound on the number of elementary row operations needed to transform a matrix to row echelon form?",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "Yes"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 35,
+        "text": "Does the order of elementary row operations matter when performing Gaussian elimination?",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "No"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 36,
+        "text": "Is it necessary to perform elementary row operations in the same order?",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "No"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 37,
+        "text": "If there is a leading 1 in the last column of the augmented matrix, the system is",
+        "type": "MC",
+        "answerOptions": [
+            "Consistent",
+            "Inconsistent"
+        ],
+        "correctAnswer": [
+            "Inconsistent"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 38,
+        "text": "The associated homogeneous linear system is the parallel object (line, plane, etc) through the origin.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 39,
+        "text": "The number of free variables is the number of variables minus the number of leading variables.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 40,
+        "text": "The number of leading variables is the number of non-zero rows in the row echelon form.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 41,
+        "text": "If there are more unknowns than equations, there must be free variables.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 42,
+        "text": "If there are more equations than variables, nothing can be said about the system (useless equations).",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 43,
+        "text": "The order of equations in a system is important.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
+    },
+    {
+        "id": 44,
+        "text": "The solution set of a system of linear equations is the intersection of the solution sets of the individual equations.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
+    },
+    {
+        "id": 45,
+        "text": "If two equations in a system are the same, one of them can be deleted.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
+    },
+    {
+        "id": 46,
+        "text": "Consider the system: \\(\\begin{cases} 7x + y = 1 \\\\ x - 2y = 0 \\end{cases}\\)\\\\ Select the correct assertions:",
+        "type": "MC",
+        "answerOptions": [
+            "There are at most 2 variables.",
+            "There are precisely 2 variables.",
+            "There are at least 2 variables."
+        ],
+        "correctAnswer": [
+            "There are precisely 2 variables."
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
+    },
+    {
+        "id": 47,
+        "text": "The number of leading variables is at most the number of variables that appear in the equation.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
+    },
+    {
+        "id": 48,
+        "text": "The number of free variables is at most the number of variables that appear in the equation.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Mixed"
     }
 ]

@@ -34,7 +34,8 @@ const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => 
         setFeedback(`
             ${status}\n
             You selected: ${[...userSet].join(", ")}\n
-            Correct answer was: ${[...correctSet].join(", ")}
+            Correct answer was: ${[...correctSet].join(", ")}\n
+            Solution: ${questions[questionIndex].solution}
         `);
 
         setPopUp(true);

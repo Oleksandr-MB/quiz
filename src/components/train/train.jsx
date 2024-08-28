@@ -7,14 +7,16 @@ const TrainApp = ({setMode}) => {
     const [filteredQuestions, setFilteredQuestions] = useState([]);    
     const [state, setState] = useState("topic");
     const [subTopic, setSubTopic] = useState(null);
-
+    const [topic, setTopic] = useState(null);
     return (
         <>
             {state === "topic" && 
                 <Topic
                     setState={setState}
+                    topic={topic}
                     subTopic={subTopic}
                     setSubTopic={setSubTopic}
+                    setTopic={setTopic}
                 />
             }
             

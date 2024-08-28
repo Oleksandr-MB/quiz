@@ -36,7 +36,7 @@ ul[class ^= select] li:hover {
     color: $darker-blue;
 }
 
-.list {
+ul[class ^= list] {
     text-decoration: none;
     list-style: none;
     font-size: large;
@@ -44,6 +44,16 @@ ul[class ^= select] li:hover {
     margin-left: 0;
     list-style-position: inside;
 }
+
+ul.list-topics {
+    cursor: pointer;
+}
+
+.list-topics-selected {
+    font-weight: bold;
+    color: $orange;
+}
+
 
 @media only screen and (max-width: 1400px) {
     .select-answer {
