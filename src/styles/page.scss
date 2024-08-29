@@ -15,6 +15,14 @@ h2 {
     font-size: 150%;
 }
 
+a {
+    color: $blue;
+}
+
+a:hover {
+    color: $orange;
+}
+
 .main-container {
     height: 70vh;
     width: 50vw;
