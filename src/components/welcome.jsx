@@ -8,10 +8,10 @@ const WelcomePage = ({setMode}) => (
         <div className="content">
             <h2>Rules:</h2>
             <ul className="list">
-                <li>In <strong>Training Mode</strong>, questions are split into many small subtopics and are not mixed.<br/></li>
-                <li>In <strong>Test Mode</strong>, questions cover whole topics and are shuffled. You will have 20 minutes solve 15 questions.<br/></li>
-                <li>If you have found a bug or have an idea on how to improve the app, feel free to contact me at <a href="mailto: oleksandr.marchenko.002@student.uni.lu">oleksandr.marchenko.002@student.uni.lu</a><br/></li>
-                <li>Finally, feel free to contribute to the GitHub repository <a href="https://github.com/Oleksandr-MB/quiz">https://github.com/Oleksandr-MB/quiz</a></li>
+                <li>In <strong>Training Mode</strong>, questions are split into many small subtopics and are not mixed.<br/></li> 
+                <li>In <strong>Test Mode</strong>, questions cover whole topics and are shuffled. You will have 20 minutes to solve 15 questions.<br/></li> 
+                <li>If you encounter a bug or have an idea for improvement, please contact me at <a href="mailto:oleksandr.marchenko.002@student.uni.lu">oleksandr.marchenko.002@student.uni.lu</a>.<br/></li> 
+                <li>Contributions to the GitHub repository are welcome: <a href="https://github.com/Oleksandr-MB/quiz">https://github.com/Oleksandr-MB/quiz</a></li>
             </ul>
             <h2>Good luck!</h2>
         </div>
