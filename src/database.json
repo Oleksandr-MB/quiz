@@ -227,7 +227,7 @@
         "correctAnswer": [
             "No"
         ],
-        "solution": "The columns are assigned to variables and hence, for example, we are not allowed to permute them. Note: technically we can permute the columns, but beware that it would change the order of variables, leading to another answer tuple, so it is HIGHLY discouraged.",
+        "solution": "The columns are assigned to variables and hence, we are not allowed to permute them. Note: technically we can permute the columns, but beware that it would change the order of variables, leading to another answer tuple, so it is HIGHLY discouraged.",
         "topic": "Linear systems",
         "subTopic": "Row and column operations"
     },
@@ -281,7 +281,7 @@
     },
     {
         "id": 18,
-        "text": "In row echelon form, the leading entry of each non-zero row is to the ____ of the leading entry of the previous row.",
+        "text": "In row echelon form, the leading entry of each non-zero row is to the ... of the leading entry of the previous row.",
         "type": "MC",
         "answerOptions": [
             "Right",
@@ -474,7 +474,7 @@
     },
     {
         "id": 30,
-        "text": "The order of the elementary row operations matters.",
+        "text": "The order of the elementary row operations matters when solving a sysstem of linear equations using elementary row operations.",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -504,7 +504,7 @@
     },
     {
         "id": 32,
-        "text": "Removing a zero row or column affects the solution set.",
+        "text": "Removing a zero row or column affects the solution set of the linear system.",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -519,7 +519,7 @@
     },
     {
         "id": 33,
-        "text": "If the row echelon form has a leading 1 in the last column, the system is not solvable.",
+        "text": "If the row echelon form has a leading 1 in the last (augmented) column, the system is not solvable.",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -534,7 +534,7 @@
     },
     {
         "id": 34,
-        "text": "Are these two augmented matrices equivalent? $$\\begin{pmatrix} 4 & 7 & 2 &\\bigm| & 1 \\\\ 8 & 1 & 2 &\\bigm| & 3 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$ and $$\\begin{pmatrix} 1 & 4 & -4 &\\bigm| & 1 \\\\ 9 & 5 & -2 &\\bigm| & 4 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$",
+        "text": "Are these two augmented matrices row equivalent? $$\\begin{pmatrix} 4 & 7 & 2 &\\bigm| & 1 \\\\ 8 & 1 & 2 &\\bigm| & 3 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$ and $$\\begin{pmatrix} 1 & 4 & -4 &\\bigm| & 1 \\\\ 9 & 5 & -2 &\\bigm| & 4 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -579,7 +579,7 @@
     },
     {
         "id": 37,
-        "text": "Is it necessary to perform elementary row operations in the same order?",
+        "text": "Is it necessary to perform elementary row operations in the same order when performing Gaussian elimination?",
         "type": "MC",
         "answerOptions": [
             "Yes",
@@ -594,7 +594,7 @@
     },
     {
         "id": 38,
-        "text": "If there is a leading 1 in the last column of the augmented matrix, the system is",
+        "text": "If there is a leading 1 in the last column of the augmented matrix in row echelon form, the system is",
         "type": "MC",
         "answerOptions": [
             "Consistent",
@@ -789,5 +789,125 @@
         "solution": "",
         "topic": "Linear systems",
         "subTopic": "Mixed"
+    },
+    {
+        "id": 51,
+        "text": "Solve the system of equations: $$\\begin{cases} 2x + 3y = 6 \\\\ 4x - y = 5 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "(x, y) = (1, 2)",
+            "(x, y) = (2, 0)",
+            "(x, y) = (0, 2)",
+            "(x, y) = (2, 1)"
+        ],
+        "correctAnswer": [
+            "(x, y) = (2, 0)"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 52,
+        "text": "Solve the system of equations: $$\\begin{cases} x + 2y + z = 4 \\\\ 2x - y + 3z = 5 \\\\ 3x + y - z = 6 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "(x, y, z) = (1, 1, 1)",
+            "(x, y, z) = (2, 0, 1)",
+            "(x, y, z) = (1, 2, 0)",
+            "(x, y, z) = (0, 1, 2)"
+        ],
+        "correctAnswer": [
+            "(x, y, z) = (1, 1, 1)"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 53,
+        "text": "Solve the system of equations: $$\\begin{cases} 3x + 4y = 10 \\\\ 5x - 2y = 3 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "(x, y) = (2, 1)",
+            "(x, y) = (1, 2)",
+            "(x, y) = (0, 3)",
+            "(x, y) = (3, 0)"
+        ],
+        "correctAnswer": [
+            "(x, y) = (2, 1)"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 54,
+        "text": "Solve the system of equations: $$\\begin{cases} x - y + z = 2 \\\\ 2x + y - 3z = -1 \\\\ -x + 4y + 2z = 7 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "(x, y, z) = (1, 2, 1)",
+            "(x, y, z) = (2, 1, 0)",
+            "(x, y, z) = (1, 1, 2)",
+            "(x, y, z) = (0, 2, 1)"
+        ],
+        "correctAnswer": [
+            "(x, y, z) = (1, 2, 1)"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 55,
+        "text": "Solve the system of equations: $$\\begin{cases} 2x + y - z = 3 \\\\ x - 2y + 3z = -1 \\\\ 3x + y + 2z = 4 \\end{cases}$$",
+        "type": "MC",
+        "answerOptions": [
+            "(x, y, z) = (1, 0, 1)",
+            "(x, y, z) = (2, 1, 0)",
+            "(x, y, z) = (1, 1, 2)",
+            "(x, y, z) = (0, 1, 1)"
+        ],
+        "correctAnswer": [
+            "(x, y, z) = (1, 0, 1)"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 56,
+        "text": "Perform Gauss-Jordan elimination on the matrix: $$\\begin{pmatrix} 1 & 2 & -1 & 3 \\\\ 2 & 1 & -2 & 1 \\\\ -3 & 1 & 1 & -2 \\end{pmatrix}$$",
+        "type": "MC",
+        "answerOptions": [
+            "$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 1 & 3 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 1 & 0 & 0 & 2 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 3 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 1 & 0 & 0 & 3 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 1 & 1 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 3 \\\\ 0 & 0 & 1 & 2 \\end{pmatrix}$$"
+        ],
+        "correctAnswer": [
+            "$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 1 & 3 \\end{pmatrix}$$"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
+    },
+    {
+        "id": 57,
+        "text": "Perform simple Gauss elimination on the matrix: $$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 1 & 3 & -2 & 1 \\\\ 3 & 2 & -1 & 5 \\end{pmatrix}$$",
+        "type": "MC",
+        "answerOptions": [
+            "$$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 0 & 3.5 & -3.5 & -1 \\\\ 0 & 0 & 0.5 & 2 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 0 & 3.5 & -3.5 & -1 \\\\ 0 & 0 & 1 & 2 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 0 & 3.5 & -3.5 & -1 \\\\ 0 & 0 & 0.5 & 1 \\end{pmatrix}$$",
+            "$$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 0 & 3.5 & -3.5 & -1 \\\\ 0 & 0 & 1 & 1 \\end{pmatrix}$$"
+        ],
+        "correctAnswer": [
+            "$$\\begin{pmatrix} 2 & -1 & 3 & 4 \\\\ 0 & 3.5 & -3.5 & -1 \\\\ 0 & 0 & 0.5 & 2 \\end{pmatrix}$$"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": ""
     }
 ]
+    
