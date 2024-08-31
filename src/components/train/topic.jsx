@@ -37,6 +37,7 @@ const SelectTopic = ({setState, topic, subTopic, setSubTopic, setTopic}) => {
                                         key={index}
                                         onClick={(event) => onSubTopicClick(event, subTpc)}
                                         className={subTpc === subTopic ? "selected" : null}
+                                        hidden={!subTpc}
                                     >
                                         {subTpc}
                                     </li>
@@ -47,7 +48,8 @@ const SelectTopic = ({setState, topic, subTopic, setSubTopic, setTopic}) => {
                 </ul>
             </div>
             <div className="footer">
-                <button 
+                <button
+                    className="btn-begin"
                     disabled={subTopic === null} 
                     onClick={() => {
                         setState("quiz");

@@ -1,0 +1,55 @@
+@import "./colors.scss";
+
+@mixin button-width($width) {
+    button[class^="btn"] {
+        width: $width;
+    }
+}
+
+@mixin main-container($height, $width) {
+    .main-container {
+        height: $height;
+        width: $width;
+    }
+}
+
+@mixin question-text($font-size) {
+    .question-text {
+        font-size: $font-size;
+        color: $green;
+    }
+}
+
+@mixin select-answer($font-size) {
+    .select-answer {
+        font-size: $font-size;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    @include button-width(22.5%);
+    @include main-container(75vh, 60vw);
+    @include question-text(17.5px);
+    @include select-answer(15.5px);
+}
+
+@media only screen and (max-width: 1200px) {
+    @include button-width(27.5%);
+    @include main-container(80vh, 70vw);
+    @include question-text(17px);
+    @include select-answer(15px);
+}
+
+@media only screen and (max-width: 1000px) {
+    @include button-width(32.5%);
+    @include main-container(80vh, 70vw);
+    @include question-text(16.5px);
+    @include select-answer(14.5px);
+}
+
+@media only screen and (max-width: 800px) {
+    @include button-width(37.5%);
+    @include main-container(90vh, 90vw);
+    @include question-text(16px);
+    @include select-answer(14px);
+}

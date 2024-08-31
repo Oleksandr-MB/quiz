@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "./colors.scss";
 
 body {
     background: $darker-blue;
@@ -11,16 +11,12 @@ body {
     margin: 0;
 }
 
-h2 {
-    font-size: 150%;
-}
-
-a {
+.link {
     color: $blue;
-}
 
-a:hover {
-    color: $orange;
+    &:hover{
+        color: $orange;
+    }
 }
 
 .main-container {
@@ -77,53 +73,6 @@ a:hover {
     gap: 5%;
     height: 10%;
     margin: 2%;
-}
-
-@media only screen and (max-width: 1400px) {
-    .main-container {
-        height: 75vh;
-        width: 60vw;
-    }
-
-    .question-text {
-        font-size: 17.5px;
-        color: $green;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .main-container {
-        height: 80vh;
-        width: 70vw;
-    }
-    .question-text {
-        font-size: 17px;
-        color: $green;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .main-container {
-        height: 80vh;
-        width: 70vw;
-    }
-
-    .question-text {
-        font-size: 16.5px;
-        color: $green;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .main-container {
-        height: 90vh;
-        width: 90vw;
-    }
-
-    .question-text {
-        font-size: 16px;
-        color: $green;
-    }
 }
 
 .answer-input {

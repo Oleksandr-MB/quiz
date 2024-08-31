@@ -74,7 +74,7 @@ const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => 
                 </ul>
             </div>
             <div className="footer">
-                <button onClick={onSubmit}>
+                <button className="btn-confirm" onClick={onSubmit}>
                     {questionIndex === filteredQuestions.length - 1 ? "Finish" : "Confirm"}
                 </button>
             </div>

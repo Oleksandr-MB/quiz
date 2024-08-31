@@ -12,6 +12,7 @@ const Result = ({filteredQuestions, setMode, setState}) => {
                             <li key={question}>
                                 <span className="question-recap"><Latex>{question.text}</Latex></span><br/>
                                 <span className="answer-recap">Correct answer: </span><Latex>{question.correctAnswer.join(", ")}</Latex><br/>
+                                <span className="answer-recap" hidden={!question.solution}>Solution: </span><Latex>{question.solution}</Latex><br/>
                             </li>
                             <div className="line"></div>
                         </>
@@ -19,7 +20,7 @@ const Result = ({filteredQuestions, setMode, setState}) => {
                 </ol>
             </div>
             <div className="footer">
-                <button onClick={() => {setMode("welcome"); setState("topic")}}>Finish</button>
+                <button className="btn-finish" onClick={() => {setMode("welcome"); setState("topic")}}>Finish</button>
             </div>
         </div>
     );

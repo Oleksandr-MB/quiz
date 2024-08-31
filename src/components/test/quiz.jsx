@@ -91,8 +91,8 @@ const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnsw
             </div>
             <div className="footer">
                 <>
-                    <button onClick={onPrev} disabled={questionIndex === 0}>Previous</button>
-                    <button onClick={onNext}>{questionIndex === filteredQuestions.length - 1 ? "Finish" : "Next"}</button>
+                    <button className="btn-prev" onClick={onPrev} disabled={questionIndex === 0}>Previous</button>
+                    <button className="btn-next" onClick={onNext}>{questionIndex === filteredQuestions.length - 1 ? "Finish" : "Next"}</button>
                 </>
             </div>
         </div>

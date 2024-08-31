@@ -1,6 +1,6 @@
-@import "colors.scss";
+@import "./colors.scss";
 
-button {
+button[class^="btn"] {
     cursor: pointer;
     background-color: $dark-blue;
     color: $blue;
@@ -11,46 +11,18 @@ button {
     width: 17.5%;
     height: 80%;
     font-size: 90%;
-}
 
-@media only screen and (max-width: 1400px) {
-    button {
-        width: 22.5%;
+    &:disabled {
+        cursor: not-allowed;
+        color: $darker-blue;
+        border-color: $red;
+        background-color: $red;
     }
-    
-}
 
-@media only screen and (max-width: 1200px) {
-    button {
-        width: 27.5%;
+    &:hover:not(:disabled) {
+        background-color: $green;
+        font-weight: bold;
+        color: $darker-blue;
+        border: $green 1px solid;
     }
-    
-}
-
-@media only screen and (max-width: 1000px) {
-    button {
-        width: 32.5%;
-    }
-    
-}
-
-@media only screen and (max-width: 800px) {
-    button {
-        width: 37.5%;
-    }
-    
-}
-
-button:disabled {
-    cursor: not-allowed;
-    color: $darker-blue;
-    border-color: $red;
-    background-color: $red;
-}
-
-button:hover:not(:disabled) {
-    background-color: $green;
-    font-weight: bold;
-    color: $darker-blue;
-    border: $green 1px solid;
 }

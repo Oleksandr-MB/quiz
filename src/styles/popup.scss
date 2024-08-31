@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "./colors.scss";
 
 .popup {
     display: block;
@@ -26,6 +26,11 @@
     border-radius: 8px; 
     font-size: 14px;
     overflow: auto;
+
+    & p {
+        margin-left: 2%;
+        white-space: pre-line;
+    }
 }
 
 .close {
@@ -34,15 +39,10 @@
     font-size: 4vh;
     margin-right: 2%;
     font-weight: bold;
-}
 
-.close:hover, .close:focus {
-    color: $red;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.popup-content p {
-    margin-left: 2%;
-    white-space: pre-line;
+    &:hover, &:focus {
+        color: $red;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }

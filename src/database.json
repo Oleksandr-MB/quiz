@@ -534,6 +534,21 @@
     },
     {
         "id": 34,
+        "text": "Are these two augmented matrices equivalent? $$\\begin{pmatrix} 4 & 7 & 2 &\\bigm| & 1 \\\\ 8 & 1 & 2 &\\bigm| & 3 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$ and $$\\begin{pmatrix} 1 & 4 & -4 &\\bigm| & 1 \\\\ 9 & 5 & -2 &\\bigm| & 4 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "$$Row_1 = Row_1 - Row_3, \\ Row_2 = Row_2 + Row_1$$",
+        "topic": "Linear systems",
+        "subTopic": "Elementary Row Operations"
+    },
+    {
+        "id": 35,
         "text": "Is there a bound on the number of elementary row operations needed to transform a matrix to row echelon form?",
         "type": "MC",
         "answerOptions": [
@@ -548,7 +563,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 35,
+        "id": 36,
         "text": "Does the order of elementary row operations matter when performing Gaussian elimination?",
         "type": "MC",
         "answerOptions": [
@@ -563,7 +578,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 36,
+        "id": 37,
         "text": "Is it necessary to perform elementary row operations in the same order?",
         "type": "MC",
         "answerOptions": [
@@ -578,7 +593,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 37,
+        "id": 38,
         "text": "If there is a leading 1 in the last column of the augmented matrix, the system is",
         "type": "MC",
         "answerOptions": [
@@ -593,7 +608,24 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 38,
+        "id": 39,
+        "text": "Select the correct order of steps to perform Gauss-Jordan elimination:\n1. Multiply the top row by a scalar so that the top row's leading entry becomes 1.\n2. Swap the rows so that all rows with all zero entries are on the bottom.\n3. Add/subtract multiples of the top row to the other rows so that all other entries in the column containing the top row's leading entry are zero.\n4. Swap the rows so that the row with the largest, leftmost nonzero entry is on top.\n5. Repeat *some previous steps* for the next leftmost nonzero entry until all the leading entries are 1.\n6. Swap the rows so that the leading entry of each nonzero row is to the right of the leading entry of the row above it.",
+        "type": "MC",
+        "answerOptions": [
+            "2, 4, 1, 3, 5, 6",
+            "4, 2, 1, 3, 5, 6",
+            "2, 1, 4, 3, 5, 6",
+            "4, 1, 2, 3, 5, 6"
+        ],
+        "correctAnswer": [
+            "2, 4, 1, 3, 5, 6"
+        ],
+        "solution": "",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+    },
+    {
+        "id": 40,
         "text": "The associated homogeneous linear system is the parallel object (line, plane, etc) through the origin.",
         "type": "MC",
         "answerOptions": [
@@ -608,7 +640,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 39,
+        "id": 41,
         "text": "The number of free variables is the number of variables minus the number of leading variables.",
         "type": "MC",
         "answerOptions": [
@@ -623,7 +655,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 40,
+        "id": 42,
         "text": "The number of leading variables is the number of non-zero rows in the row echelon form.",
         "type": "MC",
         "answerOptions": [
@@ -638,7 +670,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 41,
+        "id": 43,
         "text": "If there are more unknowns than equations, there must be free variables.",
         "type": "MC",
         "answerOptions": [
@@ -653,7 +685,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 42,
+        "id": 44,
         "text": "If there are more equations than variables, nothing can be said about the system (useless equations).",
         "type": "MC",
         "answerOptions": [
@@ -668,7 +700,7 @@
         "subTopic": "Gaussian Elimination (Theoretical Questions)"
     },
     {
-        "id": 43,
+        "id": 45,
         "text": "The order of equations in a system is important.",
         "type": "MC",
         "answerOptions": [
@@ -683,7 +715,7 @@
         "subTopic": "Mixed"
     },
     {
-        "id": 44,
+        "id": 46,
         "text": "The solution set of a system of linear equations is the intersection of the solution sets of the individual equations.",
         "type": "MC",
         "answerOptions": [
@@ -698,7 +730,7 @@
         "subTopic": "Mixed"
     },
     {
-        "id": 45,
+        "id": 47,
         "text": "If two equations in a system are the same, one of them can be deleted.",
         "type": "MC",
         "answerOptions": [
@@ -713,7 +745,7 @@
         "subTopic": "Mixed"
     },
     {
-        "id": 46,
+        "id": 48,
         "text": "Consider the system: \\(\\begin{cases} 7x + y = 1 \\\\ x - 2y = 0 \\end{cases}\\)\\\\ Select the correct assertions:",
         "type": "MC",
         "answerOptions": [
@@ -729,7 +761,7 @@
         "subTopic": "Mixed"
     },
     {
-        "id": 47,
+        "id": 49,
         "text": "The number of leading variables is at most the number of variables that appear in the equation.",
         "type": "MC",
         "answerOptions": [
@@ -744,7 +776,7 @@
         "subTopic": "Mixed"
     },
     {
-        "id": 48,
+        "id": 50,
         "text": "The number of free variables is at most the number of variables that appear in the equation.",
         "type": "MC",
         "answerOptions": [

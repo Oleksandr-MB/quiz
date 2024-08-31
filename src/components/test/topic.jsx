@@ -20,13 +20,13 @@ const SelectTopic = ({setState, topic, setTopic}) => {
                 </ul>
             </div>
             <div className="footer">
-                <button 
+                <button
+                    className="btn-begin"
                     disabled={topic === null} 
                     onClick={() => {
-                        setState("quiz")
+                        setState("quiz");
                         const selectedTopic = document.querySelector(".selected");
-                        if(selectedTopic) 
-                            selectedTopic.className = null;
+                        if(selectedTopic) selectedTopic.className = null;
                     }}
                 >
                     Begin
