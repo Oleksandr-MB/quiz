@@ -39,7 +39,7 @@ const Result = ({filteredQuestions, userAnswer, setMode, setState}) => {
                 </p>
             </div>
             <div className="footer">
-                <button onClick={() => {setMode("welcome"); setState("topic")}}>Finish</button>
+                <button className="btn-finish" onClick={() => {setMode("welcome"); setState("topic")}}>Finish</button>
             </div>
         </div>
     );
