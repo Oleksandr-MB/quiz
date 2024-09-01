@@ -12,7 +12,7 @@ ul[class ^= select] {
     margin-top: 1%;
     padding-left: 0;
 
-    & li {
+    li {
         text-decoration: none;
         list-style: none;
         color: $light-blue;
@@ -22,7 +22,7 @@ ul[class ^= select] {
         margin-top: 2.5%;
         padding: 1.5%;
 
-        & .selected {
+        &.selected {
             background-color: $blue;
             font-weight: bold;
             color: $darker-blue;
