@@ -3,15 +3,17 @@ import Topic from "./topic.jsx";
 import Quiz from "./quiz.jsx";
 import Result from "./result.jsx";
 
-const TrainApp = ({setMode}) => {
+const TrainApp = ({ setMode }) => {
     const [filteredQuestions, setFilteredQuestions] = useState([]);    
     const [state, setState] = useState("topic");
     const [subTopic, setSubTopic] = useState(null);
     const [topic, setTopic] = useState(null);
+
     return (
         <>
             {state === "topic" && 
                 <Topic
+                    setMode={setMode}
                     setState={setState}
                     topic={topic}
                     subTopic={subTopic}
@@ -22,6 +24,7 @@ const TrainApp = ({setMode}) => {
             
             {state === "quiz" && 
                 <Quiz
+                    setMode={setMode}
                     filteredQuestions={filteredQuestions}
                     setFilteredQuestions={setFilteredQuestions}
                     setState={setState}
@@ -37,7 +40,7 @@ const TrainApp = ({setMode}) => {
                 /> 
             }
         </>
-    )
+    );
 }
 
 export default TrainApp;

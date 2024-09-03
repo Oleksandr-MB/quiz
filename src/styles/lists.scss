@@ -36,10 +36,21 @@ ul[class ^= select] {
     }
 }
 
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vee {
+    font-size: x-large;
+    margin: auto;
+    margin-right: 5%;
+    font-weight: bold;
+}
+
 ul[class ^= list] {
     text-decoration: none;
     list-style: none;
-    font-size: large;
     padding-left: 0;
     margin-left: 0;
     list-style-position: inside;

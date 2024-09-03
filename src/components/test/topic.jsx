@@ -1,7 +1,7 @@
 import React from "react";
 import {topics} from "../../constants.js";
 
-const SelectTopic = ({setState, topic, setTopic}) => {
+const SelectTopic = ({setMode, setState, topic, setTopic}) => {
     
     return (
         <div className="main-container">
@@ -20,13 +20,15 @@ const SelectTopic = ({setState, topic, setTopic}) => {
                 </ul>
             </div>
             <div className="footer">
+                <button className="btn-cancel" onClick={() => {setMode("welcome"); setState("topic")}}>Cancel</button>
                 <button
                     className="btn-begin"
                     disabled={topic === null} 
                     onClick={() => {
                         setState("quiz");
                         const selectedTopic = document.querySelector(".selected");
-                        if(selectedTopic) selectedTopic.className = null;
+                        if(selectedTopic) 
+                            selectedTopic.className = null;
                     }}
                 >
                     Begin

@@ -1,28 +1,29 @@
 @import "./colors.scss";
 
 .quiz-progress {
-    margin-bottom: 2%;
-
+    display: flex;
+    justify-content: space-between;
+        
     .current-question-number {
         font-weight: bold;
-        font-size: x-large;
+        font-size: 3vh;
         color: $orange;
     }
 
     .total-question-number {
         font-weight: bold;
+        font-size: 2vh;
         color: $light-blue;
     }
 }
 
 .progress-bar-bg {
-    margin-bottom: 5%;
     position: relative;
     height: 1%;
     min-height: 5px;
     width: 100%;
     background: linear-gradient(90deg, blue, red);
-    margin-bottom: 2%;
+    margin: auto;
 
     .progress-bar {
         transform-origin: right;

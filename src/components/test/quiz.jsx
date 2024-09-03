@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Latex from "react-latex";
 import { questions } from "../../constants.js";
 
-const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnswer, topic, state, setState }) => {
+const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, setUserAnswer, topic, state, setState }) => {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [time, setTime] = useState(0);
     const maxTime = 20*60;
@@ -69,11 +69,13 @@ const Quiz = ({ filteredQuestions, setFilteredQuestions, userAnswer, setUserAnsw
     return (
         <div className="main-container">
             <div className="header">
-                <div className="progress-bar-bg"><div className="progress-bar"></div></div>
                 <div className="quiz-progress">
-                    <span className="current-question-number">{questionIndex + 1}</span>
-                    <span className="total-question-number">/{filteredQuestions.length}</span>
+                    <div className="progress-bar-bg"><div className="progress-bar"></div></div>
+                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>×</span>
                 </div>
+
+                <div className="quiz-progress"><span><span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span></span></div>
+
             </div>
             <div className="content">
                 <div className="question-text"><Latex>{filteredQuestions[questionIndex].text}</Latex></div>

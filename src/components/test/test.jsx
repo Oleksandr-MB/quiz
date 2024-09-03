@@ -13,6 +13,7 @@ const TestApp = ({setMode}) => {
         <>
             {state === "topic" && 
                 <Topic
+                    setMode={setMode}
                     setState={setState}
                     topic={topic}
                     setTopic={setTopic}
@@ -21,6 +22,7 @@ const TestApp = ({setMode}) => {
             
             {state === "quiz" && 
                 <Quiz
+                    setMode={setMode}
                     state={state}
                     filteredQuestions={filteredQuestions}
                     setFilteredQuestions={setFilteredQuestions}

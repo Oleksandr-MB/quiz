@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import Latex from "react-latex";
 import { questions } from "../../constants.js";
 
-const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => {
+const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setState }) => {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [userAnswer, setUserAnswer] = useState([]);
     const [feedback, setFeedback] = useState("");
-    const [showPopUp, setPopUp] = useState(false);
+    const [showResultPopUp, setResultPopUp] = useState(false);
 
     useEffect(() => {
         setFilteredQuestions(questions.filter(question => question.subTopic === subTopic));
         if (filteredQuestions.length > 12) setFilteredQuestions(filteredQuestions.slice(0, 12));
-
     }, [subTopic, setFilteredQuestions]);
 
     const onAnswer = (newOption) => {
@@ -38,11 +37,11 @@ const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => 
             Solution: ${filteredQuestions[questionIndex].solution}
         `);
 
-        setPopUp(true);
+        setResultPopUp(true);
     };
 
-    const closePopUp = () => {
-        setPopUp(false);
+    const closeResultPopUp = () => {
+        setResultPopUp(false);
         if (questionIndex !== filteredQuestions.length - 1) {
             setQuestionIndex(questionIndex + 1);
             setUserAnswer([]);
@@ -56,8 +55,10 @@ const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => 
         <div className="main-container">
             <div className="header">
                 <div className="quiz-progress">
-                    <span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span>
+                    <span><span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span></span>
+                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>×</span>
                 </div>
+                
             </div>
             <div className="content">
                 <div className="question-text"><Latex>{filteredQuestions[questionIndex].text}</Latex></div>
@@ -79,10 +80,10 @@ const Quiz = ({filteredQuestions, setFilteredQuestions, subTopic, setState}) => 
                 </button>
             </div>
 
-            {showPopUp && (
+            {showResultPopUp && (
                 <div className="popup">
                     <div className="popup-content">
-                        <span className="close" onClick={closePopUp}>×</span>
+                        <span className="close" onClick={closeResultPopUp}>×</span>
                         <p><Latex>{feedback}</Latex></p>
                     </div>
                 </div>

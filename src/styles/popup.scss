@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vh;
 }
 
 .popup-content {
@@ -24,11 +23,11 @@
     height: 45%;
     max-width: 600px;
     border-radius: 8px; 
-    font-size: 14px;
+    font-size: 16px;
     overflow: auto;
 
     & p {
-        margin-left: 2%;
+        margin: 3%;
         white-space: pre-line;
     }
 }
@@ -37,9 +36,8 @@
     color: $blue;
     float: right;
     font-size: 4vh;
-    margin-right: 2%;
     font-weight: bold;
-
+    margin-left: 3%;
     &:hover, &:focus {
         color: $red;
         text-decoration: none;
