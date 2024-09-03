@@ -56,7 +56,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
             <div className="header">
                 <div className="quiz-progress">
                     <span><span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span></span>
-                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>×</span>
+                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>{"\u2716"}</span>
                 </div>
                 
             </div>
@@ -83,7 +83,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
             {showResultPopUp && (
                 <div className="popup">
                     <div className="popup-content">
-                        <span className="close" onClick={closeResultPopUp}>×</span>
+                        <span className="close" onClick={closeResultPopUp}>{"\u2716"}</span>
                         <p><Latex>{feedback}</Latex></p>
                     </div>
                 </div>

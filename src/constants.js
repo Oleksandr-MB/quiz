@@ -1,6 +1,15 @@
 import questions from "./database.json";
 
-const topics = Array.from(new Set(questions.map((question) => question.topic)));
-const subTopics = Array.from(new Set(questions.map((question) => question.subTopic)));
+const topicsMap = new Map();
 
-export { questions, topics, subTopics };
+questions.forEach(qstn => {
+    if (!topicsMap.has(qstn.topic))
+        topicsMap.set(qstn.topic, new Set());
+    topicsMap.get(qstn.topic).add(qstn.subTopic);
+});
+
+topicsMap.forEach((subTopics, topic) => {
+    topicsMap.set(topic, Array.from(subTopics));
+});
+
+export { questions, topicsMap };

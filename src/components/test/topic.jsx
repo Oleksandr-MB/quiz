@@ -1,14 +1,14 @@
 import React from "react";
-import {topics} from "../../constants.js";
+import { topicsMap } from "../../constants.js";
 
 const SelectTopic = ({setMode, setState, topic, setTopic}) => {
-    
+    const topics = Array.from(topicsMap.keys());
     return (
         <div className="main-container">
             <div className="header"><h1 className="header-text">Select the topic</h1></div>
             <div className="content">
                 <ul className="select-topic">
-                    {topics.map((tpc) => (
+                    { topics.map((tpc) => (
                         <li 
                             key={tpc}
                             onClick={() => setTopic(tpc)}

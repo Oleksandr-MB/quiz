@@ -71,10 +71,12 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
             <div className="header">
                 <div className="quiz-progress">
                     <div className="progress-bar-bg"><div className="progress-bar"></div></div>
-                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>×</span>
+                    <span className="close" onClick={() => {setMode("welcome"); setState("topic")}}>{"\u2716"}</span>
                 </div>
 
-                <div className="quiz-progress"><span><span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span></span></div>
+                <div className="quiz-progress">
+                    <span><span className="current-question-number">{questionIndex + 1}</span><span className="total-question-number">/{filteredQuestions.length}</span></span>
+                </div>
 
             </div>
             <div className="content">
