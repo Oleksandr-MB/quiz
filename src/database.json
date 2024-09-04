@@ -1,24 +1,26 @@
 [
     {
         "id": 1,
-        "text": "What does it mean \"the system has a trivial solution\"?",
+        "text": "What does it mean that one solution of a linear system with $n$ variables is the trivial solution?",
         "type": "MC",
         "answerOptions": [
-            "All leading variables in the solution are 0",
-            "The system has a single solution",
-            "The linear structures that represented by the equations are intersecting in the origin"
+            "The system is homogeneous",
+            "One of the linear objects that are represented by the system of equations lies on the coordinate axis.",
+            "The solution set of each equation contains the origin of $\\mathbb{R}^n$.",
+            "The linear objects that are represented by the system of equations intersect in the the origin of $\\mathbb{R}^n$."
         ],
         "correctAnswer": [
-            "All leading variables in the solution are 0",
-            "The linear structures that represented by the equations are intersecting in the origin"
+            "The system is homogeneous",
+            "The solution set contains the origin of $\\mathbb{R}^n$",
+            "The linear objects that are represented by the system of equations intersect in the the origin of $\\mathbb{R}^n$"
         ],
-        "solution": "Both correct answers are equivalent",
+        "solution": "Homogeneous linear systems always have a trivial solution in their solution set and a solution tuple $(x, y, ...) = (0, 0, ...)$ means that the linear systems intersect in the origin of $\\mathbb{R}^n$ and finally, as the solution of the system of linear equations is an intersection of the solution sets of each equation, this means that if a system has a trivial solution, then each of the equations in that system also have a trivial solution.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 2,
-        "text": "Is $$(x, y) = (3, 0)$$ a solution of this system? $$\\begin{cases} 2x + 3y = 5 \\\\ 4x - y = 1 \\end{cases}$$",
+        "text": "Is $(x, y) = (3, 0)$ a solution of this system? $\\begin{cases} 2x + 3y = 6 \\\\ 4x - y = 1 \\end{cases}$",
         "type": "MC",
         "answerOptions": [
             "Yes",
@@ -27,13 +29,13 @@
         "correctAnswer": [
             "No"
         ],
-        "solution": "$$(x, y) = (3, 0)$$ it's a solution only of the first of the two equations",
+        "solution": "$(x, y) = (3, 0)$ is not a solution of the second equation",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 3,
-        "text": "Consider the equation $$x + y + 1 = 0$$.",
+        "text": "Consider the equation $x + y + 1 = 0$ in the real variables $x,y,z$.",
         "type": "MC",
         "answerOptions": [
             "This equation is linear",
@@ -43,15 +45,32 @@
         ],
         "correctAnswer": [
             "This equation is linear",
-            "This equation is homogeneous"
+            "This equation is consistent"
         ],
-        "solution": "It is linear as all the leading variables are in the power of 1 and it is homogeneous as the constant term is 0",
+        "solution": "It is linear because a sum of multiples of the variables plus a constant term should be zero. It is consistent (and hence not inconsistent) because $(x,y,z)=(-1,0,0)$ is a solution. It is not homogeneous because there is a non-zero constant term.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 4,
-        "text": "The following linear system is $$\\begin{cases} 2x + 3y = 5 \\\\ 4x - y = 1 \\end{cases}$$",
+        "text": "The following linear system is $\\begin{cases} 3x + y = 0 \\\\ 2x + 1 - 3y = 1 \\end{cases}$",
+        "type": "MC",
+        "answerOptions": [
+            "Consistent and homogeneous",
+            "Inconsistent and not homogeneous",
+            "Consistent and not homogeneous",
+            "Inconsistent and homogeneous"
+        ],
+        "correctAnswer": [
+            "Consistent and homogeneous"
+        ],
+        "solution": "The system is consistent because there is a solution $(x, y) = (0, 0)$. It is also homogeneous as $2x + 1 - 3y = 1 \\leftrightarrow 2x - 3y = 0$.",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 5,
+        "text": "The following linear system is $\\begin{cases} 2x + 3y = 5 \\\\ 4x - y = 1 \\end{cases}$",
         "type": "MC",
         "answerOptions": [
             "Consistent and homogeneous",
@@ -62,43 +81,28 @@
         "correctAnswer": [
             "Consistent and not homogeneous"
         ],
-        "solution": "The system has a single solution $$(x, y) = (\\frac{4}{7}, \\frac{9}{7})$$, so it is consistent and the constant terms are not 0.",
-        "topic": "Linear systems",
-        "subTopic": "Basics"
-    },
-    {
-        "id": 5,
-        "text": "An equation corresponds to a ...",
-        "type": "MC",
-        "answerOptions": [
-            "Row of the matrix",
-            "Column of the matrix"
-        ],
-        "correctAnswer": [
-            "Row"
-        ],
-        "solution": "",
+        "solution": "The system is consistent because there is the solution $(x, y) = (\\frac{4}{7}, \\frac{9}{7})$. It is not homogeneous because $(x,y)=(0,0)$ is not a solution.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 6,
-        "text": "Each row of the augmented matrix corresponds to an equation of the linear system",
+        "text": "An equation in a linear system corresponds to a ...",
         "type": "MC",
         "answerOptions": [
-            "True",
-            "False"
+            "Row of the augmented matrix",
+            "Column of the augmented matrix"
         ],
         "correctAnswer": [
-            "True"
+            "Row of the augmented matrix"
         ],
-        "solution": "",
+        "solution": "This is by definition of the augmented matrix.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 7,
-        "text": "Each column of the augmented matrix corresponds to an equation of the linear system",
+        "text": "Each column of the augmented matrix corresponds to a variable of the linear system",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -107,61 +111,61 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "A column of the augmented matrix corresponds to a variable.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 8,
-        "text": "What is the correct solution of the linear system $$\\begin{cases} 6x-4y+2z = 3 \\\\ 6x-4y+2z = 2 \\end{cases}$$",
+        "text": "What is the solution set of the linear system $\\begin{cases} x-2y=1 \\\\ z=5 \\end{cases}$ in the variables $x,y,z$, knowing that there is precisely one free variable?",
         "type": "MC",
         "answerOptions": [
-            "$$(x, y, z) = (\\frac{1}{6}+\\frac{2}{3}t, t, 1)$$",
-            "$$(x, y, z) = (1, 2, 1)$$",
-            "$$(x, y, z) = (\\frac{1}{3}+\\frac{2}{3}t, t, \\frac{1}{2})$$",
-            "It does not have a real solution"
+            "$\\{(2t, t, 5), \\ t \\in \\mathbb R\\}$",
+            "$\\{(2t+1, t, 5), \\ t \\in \\mathbb R\\}$",
+            "$\\{(t+1, 2t, 5), \\ t \\in \\mathbb R\\}$",
+            "Empty set $(\\emptyset)$"
         ],
         "correctAnswer": [
-            "It does not have a real solution"
+            "$\\{(2t+1, t, 5), \\ t \\in \\mathbb R\\}$"
         ],
-        "solution": "The equations are identical in everything but constant term, so the lines do not intersect",
+        "solution": "All given sets have the correct structure. The first set is not the solution set because setting $t=0$ does not give a solution. The third set is not correct because $(1,2,0)$ (corresponding to the coefficients of $t$) is not a solution to the associated homogeneous linear system. The empty set is not the solution set because there is the solution $(2,1,5)$. The second set is the solution set. Indeed, setting $t=0$ gives a solution and $(2,1,0)$ (corresponding to the coefficients of $t$) is a non-trivial solution to the associated homogeneous linear system. Finally, there cannot be more solutions as we know that there is only one free variable.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 9,
-        "text": "What is the correct solution of the linear system $$\\begin{cases} -2x + y = 3 \\\\ 3x - y = 1 \\end{cases}$$",
+        "text": "What is the solution set of the linear system $\\begin{cases} 2x + y = a \\\\ 2x + y = b \\end{cases}$, where $a$ and $b$ are distinct real numbers?",
         "type": "MC",
         "answerOptions": [
-            "$$(x, y) = (-4, 11)$$",
-            "$$(x, y) = (5, -1)$$",
-            "$$(x, y) = (4, 11)$$",
-            "It does not have a real solution"
+            "$\\{(t, -2t)\\}, \\ t \\in \\mathbb{R}$",
+            "$\\{(-t, -2t)\\}, \\ t \\in \\mathbb{R}$",
+            "$\\{(2t, -t)\\}, \\ t \\in \\mathbb{R}$",
+            "Empty set $(\\emptyset)$"
         ],
         "correctAnswer": [
-            "$$(x, y) = (4, 11)$$"
+            "Empty set $(\\emptyset)$"
         ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Basics"
-    },
-    {
-        "id": 10,
-        "text": "Select correct matrix, representing the linear system $$\\begin{cases} 2y+z-1 = -x \\\\ 2z = 3-5z \\\\ 3x+z = 0 \\end{cases}$$",
-        "type": "MC",
-        "answerOptions": [
-            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 5 & 2 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$",
-            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & -1 \\\\ 0 & 5 & 2 &\\bigm| & -3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$"
-        ],
-        "correctAnswer": [
-            "$$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 5 & 2 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$$"
-        ],
-        "solution": "",
+        "solution": "The equations are identical in everything but constant term, so by subtracting one equation from another we get $0 = a - b$, where $a \\neq b$, so $a - b \\neq 0$ and therefore the system is not consistent",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
         "id": 11,
+        "text": "Select correct matrix, representing the linear system $\\begin{cases} 2y+z-1 = -x \\\\ 2z = 3-5z \\\\ 3x+z = 0 \\end{cases}$",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 0 & 7 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & -1 \\\\ 0 & 0 & 7 &\\bigm| & -3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 1 & 2 & 1 &\\bigm| & 1 \\\\ 0 & 0 & 7 &\\bigm| & 3 \\\\ 3 & 0 & 1 &\\bigm| & 0 \\end{pmatrix}$"
+        ],
+        "solution": "The constant terms in the augmented matrix must have the signs as they are on the right side of the equations.",
+        "topic": "Linear systems",
+        "subTopic": "Basics"
+    },
+    {
+        "id": 12,
         "text": "Select correct statement(s):",
         "type": "MC",
         "answerOptions": [
@@ -176,7 +180,7 @@
         "subTopic": "Basics"
     },
     {
-        "id": 12,
+        "id": 13,
         "text": "Select correct statement(s):",
         "type": "MC",
         "answerOptions": [
@@ -184,14 +188,88 @@
             "A parameter is assigned to all of the leading variables"
         ],
         "correctAnswer": [
-            "In the solution set we express the leading variables in terms of the free variables. This is because the free variables can take any value, and the leading variables are dependent on these values."
+            "A parameter is assigned to all of the free variables"
         ],
-        "solution": "",
+        "solution": "In the solution set, we express the leading variables in terms of the free variables. This is because the free variables can take any value, and the leading variables are dependent on these values.",
         "topic": "Linear systems",
         "subTopic": "Basics"
     },
     {
-        "id": 13,
+        "id": 14,
+        "text": "Consider a linear system (over $\\mathbb{R}$). Mark the properties that are equivalent to the system being homogeneous.",
+        "type": "MC",
+        "answerOptions": [
+            "It has the same number of equations and variables",
+            "The system has at least one solution",
+            "The number $0$ is a solution to the system",
+            "The number $0$ is a solution to at least one equation",
+            "The right hand side of each equation is zero",
+            "The constant term of each equation is zero",
+            "Each equation of the system is homogeneous"
+        ],
+        "correctAnswer": [
+            "The constant term of each equation is zero",
+            "The number $0$ is a solution to the system"
+        ],
+        "solution": "Conditions that are not equivalent to being homogeneous: it has the same number of equations and variables; the system has at least one solution ($3x=5$ is not homogeneous); the number $0$ is a solution to at least one equation ($2x=0$, $3x=5$ is not homogeneous); the constant term in each equation is zero ($3x-5=0$ is not homogeneous).",
+        "topic": "Linear systems",
+        "subTopic": "Homogeneity, cardinality of the solution set"
+    },
+    {
+        "id": 15,
+        "text": "Which of the following linear systems (over $\\mathbb{R}$) have at least one solution?",
+        "type": "MC",
+        "answerOptions": [
+            "All linear systems",
+            "All linear systems with the same number of equations and variables",
+            "All linear systems such that each equation has a solution",
+            "All homogeneous linear systems",
+            "All consistent linear systems"
+        ],
+        "correctAnswer": [
+            "All consistent linear systems",
+            "All homogeneous linear systems"
+        ],
+        "solution": "All consistent linear systems have a solution (definition), all homogeneous linear systems have a trivial solution.",
+        "topic": "Linear systems",
+        "subTopic": "Homogeneity, cardinality of the solution set"
+    },
+    {
+        "id": 16,
+        "text": "Which of the following linear systems (over $\\mathbb{R}$) have infinitely many solutions?",
+        "type": "MC",
+        "answerOptions": [
+            "All homogeneous linear systems",
+            "All consistent not homogeneous linear systems",
+            "All linear systems having at least two distinct solutions",
+            "All linear systems such that each equation has infinitely many solutions"
+        ],
+        "correctAnswer": [
+            "All linear systems having at least two distinct solutions"
+        ],
+        "solution": "If a system has at least two distinct solutions, it means that there are infinitely many.",
+        "topic": "Linear systems",
+        "subTopic": "Homogeneity, cardinality of the solution set"
+    },
+    {
+        "id": 17,
+        "text": "How many distinct solutions can a linear system (over $\\mathbb{R}$) have?",
+        "type": "MC",
+        "answerOptions": [
+            "One or infinitely many",
+            "None or infinitely many",
+            "Not more than the number of equations in the system",
+            "One, none or infinitely many"
+        ],
+        "correctAnswer": [
+            "One, none or infinitely many"
+        ],
+        "solution": "Two lines/planes can only: not intersect at all if they are parallel, intersect at every point if they lie one on another or intersect at a single point/line.",
+        "topic": "Linear systems",
+        "subTopic": "Homogeneity, cardinality of the solution set"
+    },
+    {
+        "id": 18,
         "text": "Which of the following operations can be performed to the augmented matrix of a linear system while solving the system?",
         "type": "MC",
         "answerOptions": [
@@ -212,12 +290,117 @@
             "Swap two rows",
             "Permute the rows"
         ],
-        "solution": "All the options are correct apart from the first and sixth as we cannot multiply a row by 0 and we cannot (in general case) add to a row a multiple of itself, as it might nullify the row.",
+        "solution": "All the options are correct apart from the first and sixth as we can not multiply a row by 0 and we can not (in general case) add to a row a multiple of itself, as it might nullify the row.",
         "topic": "Linear systems",
-        "subTopic": "Row and column operations"
+        "subTopic": "Row operations"
     },
     {
-        "id": 14,
+        "id": 19,
+        "text": "The order of the elementary row operations matters.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "Elementary row operations can be performed in any order.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 20,
+        "text": "Performing elementary row operations changes the equations but not the common solutions.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "Performing elementary row operations do not change the common solutions, that is why we can use them to solve the linear systems.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 21,
+        "text": "Removing a zero row or column affects the solution set.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "Zero columns indicate that the certain variable is not affecting the system. Zero rows, on the other hand, indicate that certain equation.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 22,
+        "text": "The linear system $\\begin{cases} x - y = 3 \\\\ 2x - 2y = k \\end{cases}$ cannot have a unique solution, regardless of the value of $k \\in \\mathbb{R}$.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "By multiplying the first equation by 2, we get a system $\\begin{cases} 2x - 2y = 6 \\\\ 2x - 2y = k \\end{cases}$. Now subtracting the first system from the second we obtain a system $\\begin{cases} 2x - 2y = 6 \\\\ 0 = k - 6 \\end{cases}$. The second equation has infinitely many solutions if $k = 6$. In this case there are infinitely many solutions as the solution of $2x - 2y = 6$ will inevitably have a free variable. On the other hand, if $k \\neq 6$, then the second equation will have no solutions, so the whole system will be inconsistent.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 23,
+        "text": "Are these two augmented matrices row equivalent? $\\begin{pmatrix} 4 & 7 & 2 &\\bigm| & 1 \\\\ 8 & 1 & 2 &\\bigm| & 3 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$ and $\\begin{pmatrix} 1 & 4 & -4 &\\bigm| & 1 \\\\ 9 & 5 & -2 &\\bigm| & 4 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": [
+            "Yes"
+        ],
+        "solution": "$Row_1 = Row_1 - Row_3, \\ Row_2 = Row_2 + Row_1$",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 24,
+        "text": "The linear system with corresponding augmented matrix is consistent $\\begin{pmatrix} 2 & -1 &\\bigm| 4 \\\\ 0 & 0 &\\bigm| -1 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "Row $(0 \\ 0 \\ | \\ -1)$ represents an equation $0 = -1$, which is inconsistent.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 25,
+        "text": "If each equation in a consistent linear system is multiplied through by a nonzero constant, then all solutions to the new system can be obtained by multiplying solutions from the original system by the same constant.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "Multiplication by a nonzero constant is an elementary row operation and elementary row operations do not change the solution set.",
+        "topic": "Linear systems",
+        "subTopic": "Row operations"
+    },
+    {
+        "id": 26,
         "text": "Can we perform elementary column operations to the augmented matrix of a linear system while solving the system in the canonical way?",
         "type": "MC",
         "answerOptions": [
@@ -227,12 +410,12 @@
         "correctAnswer": [
             "No"
         ],
-        "solution": "The columns are assigned to variables and hence, we are not allowed to permute them. Note: technically we can permute the columns, but beware that it would change the order of variables, leading to another answer tuple, so it is HIGHLY discouraged.",
+        "solution": "The columns are assigned to variables and hence, for example, we are not allowed to permute them. Note: technically we can permute the columns, but beware that it would change the order of variables, leading to another answer tuple, so it is HIGHLY discouraged (i.e, not allowed).",
         "topic": "Linear systems",
-        "subTopic": "Row and column operations"
-    },
+        "subTopic": "Row operations"
+    },    
     {
-        "id": 15,
+        "id": 27,
         "text": "In row echelon form, the first entry in each non-zero row is always 1.",
         "type": "MC",
         "answerOptions": [
@@ -247,7 +430,22 @@
         "subTopic": "Row echelon form"
     },
     {
-        "id": 16,
+        "id": 28,
+        "text": "If the row echelon form has a leading 1 in the last column, the system is not solvable.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "If a matrix in row echelon form has a leading 1 in the last column, it means that this row would look like this: $(0 \\ 0 \\ 0 \\ ... \\ 0 \\ | \\ 1)$, resulting in an equation $0 = 1$, which does not have a solution, so the whole system is unsolvable.",
+        "topic": "Linear systems",
+        "subTopic": "Row echelon form"
+    },
+    {
+        "id": 29,
         "text": "Which of the following statements is true about the row echelon form of a matrix?",
         "type": "MC",
         "answerOptions": [
@@ -260,12 +458,12 @@
             "The leading entry of each non-zero row is to the right of the leading entry of the previous row",
             "All entries below a leading entry are zero"
         ],
-        "solution": "",
+        "solution": "The leading entry is not mandatory a 1, so the first and second statements are incorrect. However, the third and fourth statements are correct, as the leading entries follow a 'ladder' pattern in the row echelon form.",
         "topic": "Linear systems",
         "subTopic": "Row echelon form"
     },
     {
-        "id": 17,
+        "id": 30,
         "text": "In row echelon form, the number of non-zero rows is equal to the number of leading variables.",
         "type": "MC",
         "answerOptions": [
@@ -275,12 +473,12 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "In row echelon form, each leading variable corresponds to a pivot position in the matrix. A pivot position is the first non-zero entry in each row. Therefore, the number of non-zero rows in the matrix is equal to the number of pivot positions, which is also the number of leading variables.",
         "topic": "Linear systems",
         "subTopic": "Row echelon form"
     },
     {
-        "id": 18,
+        "id": 31,
         "text": "In row echelon form, the leading entry of each non-zero row is to the ... of the leading entry of the previous row.",
         "type": "MC",
         "answerOptions": [
@@ -290,12 +488,12 @@
         "correctAnswer": [
             "Right"
         ],
-        "solution": "",
+        "solution": "The leading ones should follow a 'ladder' pattern in the row echelon form, so each nonzero entry in the line below should be in the more right column.",
         "topic": "Linear systems",
         "subTopic": "Row echelon form"
     },
     {
-        "id": 19,
+        "id": 32,
         "text": "Row echelon form and reduced row echelon form are...",
         "type": "MC",
         "answerOptions": [
@@ -307,12 +505,12 @@
         "correctAnswer": [
             "Only reduced row echelon form is unique"
         ],
-        "solution": "",
+        "solution": "There are infinitely many row echelon forms as we can create a new row echelon form by simply multiplying one of the rows by a non-zero scalar. In the case of the reduced row echelon form, each leading entry must be a 1 and be the only non-zero entry in each row, so we cannot multiply rows by a scalar or add them up, making the reduced row echelon form unique for every matrix.",
         "topic": "Linear systems",
         "subTopic": "Row echelon form"
     },
     {
-        "id": 20,
+        "id": 33,
         "text": "The number of leading variables is equal to the number of non-zero rows in the row echelon form.",
         "type": "MC",
         "answerOptions": [
@@ -322,12 +520,12 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "In row echelon form, each non-zero row corresponds to a leading variable. Therefore, the number of leading variables is equal to the number of non-zero rows.",
         "topic": "Linear systems",
         "subTopic": "Free/Leading variables"
     },
     {
-        "id": 21,
+        "id": 34,
         "text": "If all variables are leading, the system has a unique solution.",
         "type": "MC",
         "answerOptions": [
@@ -337,12 +535,12 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "If every variable is a leading variable, there are no free variables. This means each variable can be solved uniquely, leading to a unique solution.",
         "topic": "Linear systems",
         "subTopic": "Free/Leading variables"
     },
     {
-        "id": 22,
+        "id": 35,
         "text": "We express the leading variables as a sum of multiples of the free variables and possibly a constant term.",
         "type": "MC",
         "answerOptions": [
@@ -352,13 +550,13 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "In a system of linear equations, leading variables are expressed in terms of free variables and constants.",
         "topic": "Linear systems",
         "subTopic": "Free/Leading variables"
     },
     {
-        "id": 23,
-        "text": "How many linear equations are required to define a line in $$\\mathbb{R}^3$$?",
+        "id": 36,
+        "text": "How many linear equations are required to define a line in $\\mathbb{R}^3$?",
         "type": "MC",
         "answerOptions": [
             "1",
@@ -369,13 +567,13 @@
         "correctAnswer": [
             "2"
         ],
-        "solution": "",
+        "solution": "In $\\mathbb{R}^3$, a line is defined by the intersection of two planes, each represented by a linear equation. Therefore, two linear equations are required.",
         "topic": "Linear systems",
         "subTopic": "Lines and planes"
     },
     {
-        "id": 24,
-        "text": "In $$\\mathbb{R}^2$$, the equation $$0x + 0y = 0$$ represents a line.",
+        "id": 37,
+        "text": "In $\\mathbb{R}^2$, the equation $0x + 0y = 0$ represents a line.",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -384,13 +582,13 @@
         "correctAnswer": [
             "False"
         ],
-        "solution": "",
+        "solution": "This equation represents the entire $\\mathbb{R}^2$, as it is always true.",
         "topic": "Linear systems",
         "subTopic": "Lines and planes"
     },
     {
-        "id": 25,
-        "text": "In $$\\mathbb{R}^2$$, the solution set to a linear equation can be:",
+        "id": 38,
+        "text": "In $\\mathbb{R}^2$, the solution set to a linear equation can be:",
         "type": "MC",
         "answerOptions": [
             "A unit circle",
@@ -406,13 +604,13 @@
             "A single point",
             "The whole plane"
         ],
-        "solution": "",
+        "solution": "Only a linear object can be a solution of a linear system.",
         "topic": "Linear systems",
         "subTopic": "Lines and planes"
     },
     {
-        "id": 26,
-        "text": "The lines represented by the following linear system are: $$\\begin{cases} -4x + 2y = 3 \\\\ 2x + 7y = -2 \\end{cases}$$",
+        "id": 39,
+        "text": "The lines represented by the following linear system are: $\\begin{cases} -4x + y = 3 \\\\ \\frac{1}{2}x + 2y = -2 \\end{cases}$",
         "type": "MC",
         "answerOptions": [
             "Perpendicular",
@@ -423,12 +621,14 @@
         "correctAnswer": [
             "Perpendicular"
         ],
-        "solution": "",
+        "solution": "Recall from high-school algebra that lines in $\\mathbb{R}^2$ are perpendicular if the coefficients at $y$ are the same and the product of coefficients at $x$ equals $-1$.",
         "topic": "Linear systems",
         "subTopic": "Lines and planes"
     },
+
+
     {
-        "id": 27,
+        "id": 41,
         "text": "Summing two solutions of an inhomogeneous linear system gives a solution of the inhomogeneous linear system.",
         "type": "MC",
         "answerOptions": [
@@ -438,12 +638,12 @@
         "correctAnswer": [
             "False"
         ],
-        "solution": "",
+        "solution": "The sum of two solutions of an inhomogeneous system is generally not a solution of the same system because the inhomogeneous part (constant term) does not cancel out.",
         "topic": "Linear systems",
-        "subTopic": "Sums"
+        "subTopic": "Sums of solution sets"
     },
     {
-        "id": 28,
+        "id": 42,
         "text": "Summing two solutions of a homogeneous linear system gives a solution of the homogeneous linear system.",
         "type": "MC",
         "answerOptions": [
@@ -453,12 +653,12 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "The set of solutions to a homogeneous linear system forms a vector space. Therefore, the sum of any two solutions is also a solution.",
         "topic": "Linear systems",
-        "subTopic": "Sums"
+        "subTopic": "Sums of solution sets"
     },
     {
-        "id": 29,
+        "id": 43,
         "text": "Summing a solution of an inhomogeneous linear system and a solution of the corresponding homogeneous linear system gives a solution of the:",
         "type": "MC",
         "answerOptions": [
@@ -468,87 +668,12 @@
         "correctAnswer": [
             "Inhomogeneous linear system"
         ],
-        "solution": "",
+        "solution": "The set of solutions to a homogeneous linear system forms a vector space. Therefore, the sum of any two solutions is also a solution.",
         "topic": "Linear systems",
-        "subTopic": "Sums"
+        "subTopic": "Sums of solution sets"
     },
     {
-        "id": 30,
-        "text": "The order of the elementary row operations matters when solving a sysstem of linear equations using elementary row operations.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "False"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Elementary Row Operations"
-    },
-    {
-        "id": 31,
-        "text": "Performing elementary row operations changes the equations but not the common solutions.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Elementary Row Operations"
-    },
-    {
-        "id": 32,
-        "text": "Removing a zero row or column affects the solution set of the linear system.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "False"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Elementary Row Operations"
-    },
-    {
-        "id": 33,
-        "text": "If the row echelon form has a leading 1 in the last (augmented) column, the system is not solvable.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Elementary Row Operations"
-    },
-    {
-        "id": 34,
-        "text": "Are these two augmented matrices row equivalent? $$\\begin{pmatrix} 4 & 7 & 2 &\\bigm| & 1 \\\\ 8 & 1 & 2 &\\bigm| & 3 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$ and $$\\begin{pmatrix} 1 & 4 & -4 &\\bigm| & 1 \\\\ 9 & 5 & -2 &\\bigm| & 4 \\\\ 3 & 3 & 6 &\\bigm| & 0 \\end{pmatrix}$$",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "$$Row_1 = Row_1 - Row_3, \\ Row_2 = Row_2 + Row_1$$",
-        "topic": "Linear systems",
-        "subTopic": "Elementary Row Operations"
-    },
-    {
-        "id": 35,
+        "id": 44,
         "text": "Is there a bound on the number of elementary row operations needed to transform a matrix to row echelon form?",
         "type": "MC",
         "answerOptions": [
@@ -558,12 +683,12 @@
         "correctAnswer": [
             "Yes"
         ],
-        "solution": "",
+        "solution": "The number of elementary row operations required is bounded by a function of the number of rows and columns of the matrix.",
         "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+        "subTopic": "Gaussian elimination"
     },
     {
-        "id": 36,
+        "id": 45,
         "text": "Does the order of elementary row operations matter when performing Gaussian elimination?",
         "type": "MC",
         "answerOptions": [
@@ -573,13 +698,13 @@
         "correctAnswer": [
             "No"
         ],
-        "solution": "",
+        "solution": "The final row echelon form will be the same regardless of the order of the row operations, although the intermediate steps may differ.",
         "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+        "subTopic": "Gaussian elimination"
     },
     {
-        "id": 37,
-        "text": "Is it necessary to perform elementary row operations in the same order when performing Gaussian elimination?",
+        "id": 46,
+        "text": "Is it necessary to perform elementary row operations in the same order?",
         "type": "MC",
         "answerOptions": [
             "Yes",
@@ -588,27 +713,132 @@
         "correctAnswer": [
             "No"
         ],
-        "solution": "",
+        "solution": "Different orders of row operations can still lead to the same row echelon form, so the specific order is not necessary.",
         "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+        "subTopic": "Gaussian elimination"
     },
     {
-        "id": 38,
-        "text": "If there is a leading 1 in the last column of the augmented matrix in row echelon form, the system is",
+        "id": 47,
+        "text": "The associated homogeneous linear system is the parallel object (line, plane, etc) through the origin.",
         "type": "MC",
         "answerOptions": [
-            "Consistent",
-            "Inconsistent"
+            "True",
+            "False"
         ],
         "correctAnswer": [
-            "Inconsistent"
+            "True"
         ],
-        "solution": "",
+        "solution": "The solution set of a homogeneous system always includes the origin, making it a subspace (line, plane, etc.) through the origin.",
         "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+        "subTopic": "Gaussian elimination"
     },
     {
-        "id": 39,
+        "id": 48,
+        "text": "If the reduced row echelon form of the augmented matrix for a linear system has a row of zeros, then the system must have infinitely many solutions.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "If the system has more equations than the number of variables and one of the equations is repeating, then it is possible that the augmented matrix would have a zero row but the system will still have a single solution.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 49,
+        "text": "The number of free variables is the number of variables minus the number of leading variables.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "Free variables are those that are not leading variables, so their number is the total number of variables minus the number of leading variables.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 50,
+        "text": "The number of leading variables is the number of non-zero rows in the row echelon form.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "Free variables are those that are not leading variables, so their number is the total number of variables minus the number of leading variables.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 51,
+        "text": "If a matrix is in reduced row echelon form, then it is also in row echelon form.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "The reduced row echelon form does not contradict the simple row echelon form, as there are still no nonzero entries below the leading ones.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 52,
+        "text": "If an elementary row operation is applied to a matrix that is in row echelon form, the resulting matrix will still be in row echelon form.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "If an elementary row operation is applied to a matrix that is in row echelon form this can disrupt the row echelon form. For example, adding two rows might introduce a non-zero entry below a leading entry, violating the row echelon form’s requirements.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 53,
+        "text": "If there are more unknowns than equations, there must be free variables.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "With more unknowns than equations, not all variables can be leading, so there must be free variables.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },
+    {
+        "id": 54,
+        "text": "If there are more equations than variables, the system is unsolvable.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "False"
+        ],
+        "solution": "Nothing can be said about the system.",
+        "topic": "Linear systems",
+        "subTopic": "Gaussian elimination"
+    },    
+    {
+        "id": 55,
         "text": "Select the correct order of steps to perform Gauss-Jordan elimination: $$\\newline$$ 1. Multiply the top row by a scalar so that the top row's leading entry becomes 1. $$\\newline$$ 2. Swap the rows so that all rows with all zero entries are on the bottom. $$\\newline$$ 3. Add/subtract multiples of the top row to the other rows so that all other entries in the column containing the top row's leading entry are zero. $$\\newline$$ 4. Swap the rows so that the row with the largest, leftmost nonzero entry is on top. $$\\newline$$ 5. Repeat *some previous steps* for the next leftmost nonzero entry until all the leading entries are 1. $$\\newline$$ 6. Swap the rows so that the leading entry of each nonzero row is to the right of the leading entry of the row above it.",
         "type": "MC",
         "answerOptions": [
@@ -620,87 +850,12 @@
         "correctAnswer": [
             "2, 4, 1, 3, 5, 6"
         ],
-        "solution": "",
+        "solution": "Refer to the slides",
         "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
+        "subTopic": "Gaussian Elimination"
     },
     {
-        "id": 40,
-        "text": "The associated homogeneous linear system is the parallel object (line, plane, etc) through the origin.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
-    },
-    {
-        "id": 41,
-        "text": "The number of free variables is the number of variables minus the number of leading variables.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
-    },
-    {
-        "id": 42,
-        "text": "The number of leading variables is the number of non-zero rows in the row echelon form.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
-    },
-    {
-        "id": 43,
-        "text": "If there are more unknowns than equations, there must be free variables.",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
-    },
-    {
-        "id": 44,
-        "text": "If there are more equations than variables, nothing can be said about the system (useless equations).",
-        "type": "MC",
-        "answerOptions": [
-            "True",
-            "False"
-        ],
-        "correctAnswer": [
-            "True"
-        ],
-        "solution": "",
-        "topic": "Linear systems",
-        "subTopic": "Gaussian Elimination (Theoretical Questions)"
-    },
-    {
-        "id": 45,
+        "id": 55,
         "text": "The order of equations in a system is important.",
         "type": "MC",
         "answerOptions": [
@@ -710,12 +865,12 @@
         "correctAnswer": [
             "False"
         ],
-        "solution": "",
+        "solution": "The order of equations in a system of linear equations does not affect the solution set. The system can be solved regardless of the order in which the equations are written.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 46,
+        "id": 56,
         "text": "The solution set of a system of linear equations is the intersection of the solution sets of the individual equations.",
         "type": "MC",
         "answerOptions": [
@@ -725,12 +880,12 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "The solution to a system of linear equations is the set of points that satisfy all the equations simultaneously.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 47,
+        "id": 57,
         "text": "If two equations in a system are the same, one of them can be deleted.",
         "type": "MC",
         "answerOptions": [
@@ -740,13 +895,13 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "We can get rid of one of them as the difference between those equations is a zero row.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 48,
-        "text": "Consider the system: $$\\begin{cases} 7x + y = 1 \\\\ x - 2y = 0 \\end{cases}$$ Select the correct assertions:",
+        "id": 58,
+        "text": "Consider the system: $\\begin{cases} 7x + y = 1 \\\\ x - 2y = 0 \\end{cases}$ Select the correct assertion:",
         "type": "MC",
         "answerOptions": [
             "There are at most 2 variables.",
@@ -754,14 +909,14 @@
             "There are at least 2 variables."
         ],
         "correctAnswer": [
-            "There are precisely 2 variables."
+            "There are at least 2 variables."
         ],
-        "solution": "",
+        "solution": "In any linear system the number of variables is actually infinite, however, in this case only 2 variables have nonzero coefficients.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 49,
+        "id": 59,
         "text": "The number of leading variables is at most the number of variables that appear in the equation.",
         "type": "MC",
         "answerOptions": [
@@ -771,13 +926,13 @@
         "correctAnswer": [
             "True"
         ],
-        "solution": "",
+        "solution": "In case of existence of a unique solution of the system, each variable is the leading variable.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 50,
-        "text": "The number of free variables is at most the number of variables that appear in the equation.",
+        "id": 60,
+        "text": "The number of free variables is at most the number of leading variables.",
         "type": "MC",
         "answerOptions": [
             "True",
@@ -786,12 +941,12 @@
         "correctAnswer": [
             "False"
         ],
-        "solution": "",
+        "solution": "The number of free variables is determined by the total number of variables minus the number of leading variables. Therefore, the number of free variables can be less than or equal to the total number of variables but not necessarily less than or equal to the number of leading variables.",
         "topic": "Linear systems",
         "subTopic": "Mixed"
     },
     {
-        "id": 51,
+        "id": 61,
         "text": "Solve the system of equations: $$\\begin{cases} 2x + 3y = 6 \\\\ 4x - y = 5 \\end{cases}$$",
         "type": "MC",
         "answerOptions": [
@@ -808,7 +963,7 @@
         "subTopic": ""
     },
     {
-        "id": 52,
+        "id": 62,
         "text": "Solve the system of equations: $$\\begin{cases} x + 2y + z = 4 \\\\ 5x - y + 3z = 3 \\\\ 3x + 5y - z = 6 \\end{cases}$$",
         "type": "MC",
         "answerOptions": [
@@ -825,7 +980,7 @@
         "subTopic": ""
     },
     {
-        "id": 53,
+        "id": 63,
         "text": "Solve the system of equations: $$\\begin{cases} 3x + 4y = 10 \\\\ 5x - 7y = 3 \\end{cases}$$",
         "type": "MC",
         "answerOptions": [
@@ -842,7 +997,7 @@
         "subTopic": ""
     },
     {
-        "id": 54,
+        "id": 64,
         "text": "Solve the system of equations: $$\\begin{cases} x - y + z = 2 \\\\ 2x + y - 3z = -1 \\\\ -x + 4y + 2z = 7 \\end{cases}$$",
         "type": "MC",
         "answerOptions": [
@@ -859,7 +1014,7 @@
         "subTopic": ""
     },
     {
-        "id": 55,
+        "id": 65,
         "text": "Solve the system of equations: $$\\begin{cases} 2x + y - z = 3 \\\\ x - 2y + 3z = -1 \\\\ 3x + y + 2z = 4 \\end{cases}$$",
         "type": "MC",
         "answerOptions": [
@@ -876,7 +1031,7 @@
         "subTopic": ""
     },
     {
-        "id": 56,
+        "id": 66,
         "text": "Perform Gauss-Jordan elimination on the matrix: $$\\begin{pmatrix} 1 & 2 & -1 &\\bigm| 3 \\\\ 2 & 1 & -2 &\\bigm| 1 \\\\ -3 & 1 & 1 &\\bigm| -2 \\end{pmatrix}$$",
         "type": "MC",
         "answerOptions": [
@@ -893,7 +1048,7 @@
         "subTopic": ""
     },
     {
-        "id": 57,
+        "id": 67,
         "text": "Perform simple Gauss elimination on the matrix: $$\\begin{pmatrix} 2 & -1 & 3 &\\bigm| 4 \\\\ 1 & 3 & -2 &\\bigm| 1 \\\\ 3 & 2 & -1 &\\bigm| 5 \\end{pmatrix}$$",
         "type": "MC",
         "answerOptions": [

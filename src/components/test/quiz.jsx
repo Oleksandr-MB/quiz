@@ -8,7 +8,8 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
     const maxTime = 20*60;
 
     const progressBar = document.querySelector(".progress-bar");
-    if (progressBar) progressBar.style.setProperty("--maxTime", `${maxTime}s`);
+    if (progressBar) 
+        progressBar.style.setProperty("--maxTime", `${maxTime}s`);
 
     const shuffle = (array) => {
         let currentIndex = array.length;
@@ -21,12 +22,15 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
     };
 
     const onNext = () => {
-        if (questionIndex < filteredQuestions.length - 1) setQuestionIndex(prev => prev + 1);
-        else setState("result");
+        if (questionIndex < filteredQuestions.length - 1) 
+            setQuestionIndex(prev => prev + 1);
+        else 
+            setState("result");
     };
 
     const onPrev = () => {
-        if (questionIndex > 0) setQuestionIndex(prev => prev - 1);
+        if (questionIndex > 0) 
+            setQuestionIndex(prev => prev - 1);
     };
 
     useEffect(() => {

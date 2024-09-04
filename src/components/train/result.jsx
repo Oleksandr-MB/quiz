@@ -7,9 +7,9 @@ const Result = ({filteredQuestions, setMode, setState}) => {
             <div className="header"><h1 className="header-text">Recap</h1></div>
             <div className="content">
                 <ol className="recap">
-                    {filteredQuestions.map((question) => ( 
+                    {filteredQuestions.map((question, index) => ( 
                         <>
-                            <li key={question}>
+                            <li key={index}>
                                 <span className="question-recap"><Latex>{question.text}</Latex></span><br/>
                                 <span className="answer-recap">Correct answer: </span><Latex>{question.correctAnswer.join(", ")}</Latex><br/>
                                 <span className="answer-recap" hidden={!question.solution}>Solution: </span><Latex>{question.solution}</Latex><br/>

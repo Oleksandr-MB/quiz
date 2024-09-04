@@ -21,7 +21,9 @@ const SelectTopic = ({ setMode, setState, topic, subTopic, setSubTopic, setTopic
         const selectedTopic = document.querySelector(".selected");
         if (selectedTopic) selectedTopic.className = null;
     };
+
     const topics = Array.from(topicsMap.keys());
+
     return (
         <div className="main-container">
             <div className="header"><h1 className="header-text">Select the topic</h1></div>
@@ -54,7 +56,7 @@ const SelectTopic = ({ setMode, setState, topic, subTopic, setSubTopic, setTopic
                 </ul>
             </div>
             <div className="footer">
-                <button className="btn-cancel" onClick={() => { setMode("welcome"); setState("topic"); }}>Cancel</button>
+                <button className="btn-cancel" onClick={() => {setMode("welcome"); setState("topic")}}>Cancel</button>
                 <button
                     className="btn-begin"
                     disabled={subTopic === null} 
