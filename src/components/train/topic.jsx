@@ -19,7 +19,8 @@ const SelectTopic = ({ setMode, setState, topic, subTopic, setSubTopic, setTopic
     const onBegin = () => {
         setState("quiz");
         const selectedTopic = document.querySelector(".selected");
-        if (selectedTopic) selectedTopic.className = null;
+        if (selectedTopic) 
+            selectedTopic.className = null;
     };
 
     const topics = Array.from(topicsMap.keys());
