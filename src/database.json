@@ -507,6 +507,23 @@
         "subTopic": "Row Echelon Form"
     },
     {
+        "id": "1.5.9",
+        "text": "What is true about the number of elementary row operations needed to transform a matrix into row echelon form?",
+        "type": "MC",
+        "answerOptions": [
+            "It depends on the number of columns",
+            "It depends on the number of rows",
+            "It depends on the number of entries"
+        ],
+        "correctAnswer": [
+            "It depends on the number of rows",
+            "It depends on the number of columns"
+        ],
+        "solution": "The number of elementary row operations required is bounded by a function of the number of rows and columns of the matrix.",
+        "topic": "Linear Systems",
+        "subTopic": "Row Echelon Form"
+    },
+    {
         "id": "1.6.1",
         "text": "Consider the linear system $\\begin{cases} x-2y=1 \\\\ z=5 \\end{cases}$ in the variables $(x,y,z)$. Knowing that there is precisely one free variable, what is the solution set of the system?",
         "type": "MC",
@@ -657,6 +674,81 @@
         "topic": "Linear Systems",
         "subTopic": "Solution Set"
     },
+    {
+        "id": "1.7.1",
+        "text": "How many linear equations are needed to define a line in $\\mathbb{R}^3$?",
+        "type": "MC",
+        "answerOptions": [
+            "1",
+            "2",
+            "3"
+        ],
+        "correctAnswer": ["2"],
+        "solution": "In $\\mathbb{R}^3$, a linear equation has as solution set a plane through the origin, unless all coefficients of the variables are zero (in which case there are no solutions or the solution set is $\\mathbb{R}^3$). So we need at least two equations to determine a line (the intersection of two distinct planes through the origin is a line through the origin).",
+        "topic": "Linear Equations",
+        "subTopic": "Geometry"
+    },
+    {
+        "id": "1.7.2",
+        "text": "Suppose that a linear system has infinitely many solutions. What can be said about the solution set of the system and the solution set of the associated homogeneous linear system (seen as geometrical objects)?",
+        "type": "MC",
+        "answerOptions": [
+            "They are parallel.",
+            "They are perpendicular.",
+            "They are identical."
+        ],
+        "correctAnswer": ["They are parallel."],
+        "solution": "The solution set of the corresponding homogeneous system is a translate (more precisely, the translate through the origin) of the solution set of the system. So they are parallel. They are identical only when the original system is already homogeneous.",
+        "topic": "Linear Equations",
+        "subTopic": "Geometry"
+    },
+    {
+        "id": "1.7.3",
+        "text": "In $\\mathbb{R}^2$, the equation $ax + by = c$ (where $a,b,c$ are real numbers) represents a line.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["False"],
+        "solution": "The equation $0x + 0y = c$ has as solution set the empty set (if $c\\neq 0$) or $\\mathbb{R}^2$ (if $c=0$).",
+        "topic": "Linear Equations",
+        "subTopic": "Geometry"
+    },
+    {
+        "id": "1.7.4",
+        "text": "In $\\mathbb{R}^2$, the solution set to a linear system can be:",
+        "type": "MC",
+        "answerOptions": [
+            "The unit circle",
+            "Any half-plane",
+            "The empty set",
+            "The whole plane",
+            "Any line",
+            "Any point"
+        ],
+        "correctAnswer": [
+            "The empty set",
+            "The whole plane"
+        ],
+        "solution": "The solution set can be the empty set ($0x+0y=1$) or the whole plane ($0x+0y=0$). Else, the solution set must be the origin $(x,y)=(0,0)$ or a line through the origin. So, the solution set cannot be the unit circle, a half-plane, a line not through the origin, or a point that is not the origin.",
+        "topic": "Linear Equations",
+        "subTopic": "Geometry"
+    },
+    {
+        "id": "1.7.5",
+        "text": "The two lines represented by the equations $2x + 4y = 3$ and $x + 2y = 1$ are:",
+        "type": "MC",
+        "answerOptions": [
+            "Parallel",
+            "Identical",
+            "None of the above"
+        ],
+        "correctAnswer": ["Parallel"],
+        "solution": "We can rewrite the second equation as $2x + 4y = 2$. As the two equations differ by the constant term, there is no common solution. As each equation represents a line, we have two lines that do not intersect, so they are parallel but not identical.",
+        "topic": "Linear Equations",
+        "subTopic": "Geometry"
+    },    
     {
         "id": "1.t.1",
         "text": "Solve the system of equations:\n$\\begin{cases} 2x + 3y = 6 \\\\ 4x - y = 5 \\end{cases}$",
