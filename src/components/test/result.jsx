@@ -2,24 +2,23 @@ import React from "react";
 
 const Result = ({filteredQuestions, userAnswer, setMode, setState}) => {
     const calculateScore = () => {
-        let totalScore = 0;
-        let fc = 0;
-        let pc = 0;
-        let wr = 0;
+        let totalScore = 0, fc = 0, pc = 0, wr = 0;
+        
         userAnswer.forEach((answers, questionIndex) => {
             const userSet = new Set(answers.sort());
             const correctSet = new Set(filteredQuestions[questionIndex].correctAnswer.sort());
             const intersection = new Set([...userSet].filter(x => correctSet.has(x)));
     
             if (userSet.size === correctSet.size && intersection.size === userSet.size) {
-                totalScore += 1; 
+                totalScore++; 
                 fc++;
             } 
-            else if (intersection.size > 0) {
+            else if (intersection.size > 0 && correctSet.size > 1) {
                 totalScore += 0.5;
                 pc++;
             }
-            else wr++;
+            else 
+                wr++;
         });
     
         return {totalScore, fc, pc, wr};

@@ -53,7 +53,8 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
                     return prevTime + 1;
                 });
             }, 1000);
-        } else {
+        } 
+        else {
             setTime(0);
         }
         return () => clearInterval(interval);
@@ -68,7 +69,8 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
         });
     };
 
-    if (filteredQuestions.length === 0) return <div className="main-container">Loading...</div>;
+    if (filteredQuestions.length === 0) 
+        return <div className="main-container">Loading...</div>;
 
     return (
         <div className="main-container">

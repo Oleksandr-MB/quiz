@@ -10,7 +10,9 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
 
     useEffect(() => {
         setFilteredQuestions(questions.filter(question => question.subTopic === subTopic));
-        if (filteredQuestions.length > 12) setFilteredQuestions(filteredQuestions.slice(0, 12));
+        if (filteredQuestions.length > 12) 
+            setFilteredQuestions(filteredQuestions.slice(0, 12));
+        
     }, [subTopic, setFilteredQuestions]);
 
     const onAnswer = (newOption) => {
@@ -26,9 +28,12 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
         const intersection = new Set([...userSet].filter(x => correctSet.has(x)));
         let status = "";
 
-        if (userSet.size === correctSet.size && intersection.size === userSet.size) status = "Fully correct!";
-        else if (intersection.size > 0) status = "Partially correct!";
-        else status = "Wrong!";
+        if (userSet.size === correctSet.size && intersection.size === userSet.size) 
+            status = "Fully correct!";
+        else if (intersection.size > 0 && correctSet.size > 1) 
+            status = "Partially correct!";
+        else 
+            status = "Wrong!";
 
         setFeedback(`
             ${status}\n
@@ -46,10 +51,12 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
             setQuestionIndex(questionIndex + 1);
             setUserAnswer([]);
         } 
-        else setState("result");
+        else 
+            setState("result");
     };
 
-    if (filteredQuestions.length === 0) return <div className="main-container">Loading...</div>;
+    if (filteredQuestions.length === 0) 
+        return <div className="main-container">Loading...</div>;
 
     return (
         <div className="main-container">
@@ -80,7 +87,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                 </button>
             </div>
 
-            {showResultPopUp && (
+            { showResultPopUp && (
                 <div className="popup">
                     <div className="popup-content">
                         <span className="close" onClick={closeResultPopUp}>{"\u2716"}</span>
