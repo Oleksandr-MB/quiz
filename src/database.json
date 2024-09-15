@@ -402,7 +402,7 @@
         "text": "For a matrix in row echelon form, which of the following properties hold? (Note: the leading entry is the left-most nonzero entry)",
         "type": "MC",
         "answerOptions": [
-            "The leading entry of each non-zero row is 1",
+            "The matrix is necessary a square matrix",
             "The leading entry of each non-zero row is to the right of the leading entry of the previous row",
             "All entries below a leading entry are zero"
         ],
@@ -410,7 +410,7 @@
             "The leading entry of each non-zero row is to the right of the leading entry of the previous row",
             "All entries below a leading entry are zero"
         ],
-        "solution": "The leading entry is not necessarily 1. The second and third statements are correct because the leading entries follow a \"ladder\" pattern in the row echelon form.",
+        "solution": "For the row echelon form, the number of rows and columns does not matter, and in particular the matrix does not need to be a square matrix. The second and third statements are correct because the leading entries follow a \"ladder\" pattern in the row echelon form.",
         "topic": "Linear Systems",
         "subTopic": "Row Echelon Form"
     },
