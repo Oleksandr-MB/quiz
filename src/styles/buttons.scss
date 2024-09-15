@@ -11,6 +11,8 @@ button[class^="btn"] {
     width: 17.5%;
     height: 80%;
     font-size: 90%;
+    min-height: 45px;
+    min-width: 120px;
 
     &:disabled {
         cursor: not-allowed;

@@ -78,3 +78,16 @@ body {
 .answer-input {
     margin-top: 5%;
 }
+
+.close {
+    color: $blue;
+    float: right;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-left: 3%;
+    &:hover, &:focus {
+        color: $red;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

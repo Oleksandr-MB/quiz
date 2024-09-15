@@ -54,9 +54,9 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
                 });
             }, 1000);
         } 
-        else {
+        else
             setTime(0);
-        }
+        
         return () => clearInterval(interval);
     }, [state, setState]);
 
@@ -88,7 +88,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, userAnswer, se
             <div className="content">
                 <div className="question-text"><Latex>{filteredQuestions[questionIndex].text}</Latex></div>
                 <ul className="select-answer">
-                    {filteredQuestions[questionIndex].answerOptions.map((option, index) => (
+                    { filteredQuestions[questionIndex].answerOptions.map((option, index) => (
                         <li
                             key={index}
                             onClick={() => onAnswer(option)}

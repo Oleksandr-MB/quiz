@@ -31,7 +31,7 @@ const Result = ({filteredQuestions, userAnswer, setMode, setState}) => {
             <div className="header"><h1 className="header-text">Score</h1></div>
             <div className="content">
                 <p className="result">
-                    Your score: {result.totalScore}/{filteredQuestions.length}<br/>
+                    <span className="answer-recap">Your score: {result.totalScore}/{filteredQuestions.length}</span><br/>
                     Fully correct answers: {result.fc}<br/>
                     Partially correct answers: {result.pc}<br/>
                     Wrong answers: {result.wr}

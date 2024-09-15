@@ -7,18 +7,17 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
     const [userAnswer, setUserAnswer] = useState([]);
     const [feedback, setFeedback] = useState("");
     const [showResultPopUp, setResultPopUp] = useState(false);
+    const [showSolution, setShowSolution] = useState(false);
 
     useEffect(() => {
-        setFilteredQuestions(questions.filter(question => question.subTopic === subTopic));
-        if (filteredQuestions.length > 12) 
-            setFilteredQuestions(filteredQuestions.slice(0, 12));
-        
+        const filtered = questions.filter(question => question.subTopic === subTopic);
+        setFilteredQuestions(filtered.length > 12 ? filtered.slice(0, 12) : filtered);
     }, [subTopic, setFilteredQuestions]);
 
     const onAnswer = (newOption) => {
-        setUserAnswer(prev => {
-            return prev.includes(newOption) ? prev.filter(prevOption => prevOption !== newOption) : prev.concat(newOption);
-        });
+        setUserAnswer(prev => 
+            prev.includes(newOption) ? prev.filter(prevOption => prevOption !== newOption) : [...prev, newOption]
+        );
     };
 
     const onSubmit = () => {
@@ -35,13 +34,13 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
         else 
             status = "Wrong!";
 
-        setFeedback(`
-            ${status}\n
-            You selected: ${[...userSet].join(", ")}\n
-            Correct answer was: ${[...correctSet].join(", ")}\n
-            Solution: ${filteredQuestions[questionIndex].solution}
-        `);
-
+        setFeedback({
+            status: status,
+            userSelection: [...userSet].join(", "),
+            correctAnswers: [...correctSet].join(", "),
+            solution: filteredQuestions[questionIndex].solution
+        });        
+        
         setResultPopUp(true);
     };
 
@@ -50,9 +49,9 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
         if (questionIndex !== filteredQuestions.length - 1) {
             setQuestionIndex(questionIndex + 1);
             setUserAnswer([]);
-        } 
-        else 
+        } else {
             setState("result");
+        }
     };
 
     if (filteredQuestions.length === 0) 
@@ -68,7 +67,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                 
             </div>
             <div className="content">
-                <div className="question-text"><Latex>{filteredQuestions[questionIndex].text}</Latex></div>
+                <div className="question-text"><Latex>{String(filteredQuestions[questionIndex].text)}</Latex></div>
                 <ul className="select-answer">
                     {filteredQuestions[questionIndex].answerOptions.map((option, index) => (
                         <li
@@ -76,7 +75,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                             onClick={() => onAnswer(option)}
                             className={userAnswer.includes(option) ? "selected" : null}
                         >
-                            <Latex>{option}</Latex>
+                            <Latex>{String(option)}</Latex>
                         </li>
                     ))}
                 </ul>
@@ -90,8 +89,20 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
             { showResultPopUp && (
                 <div className="popup">
                     <div className="popup-content">
-                        <span className="close" onClick={closeResultPopUp}>{"\u2716"}</span>
-                        <p><Latex>{feedback}</Latex></p>
+                        <div className="popup-feedback">
+                            <span className="question-recap">{feedback.status}</span><br/>
+                            <span className="answer-recap">You selected: </span><Latex>{String(feedback.userSelection)}</Latex><br/>
+                            <span className="answer-recap">Correct answer: </span><Latex>{String(feedback.correctAnswers)}</Latex><br/>
+                            <div className="show-solution-btn">
+                                <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
+                            </div>
+                            <div className="show-solution" hidden={!showSolution}>
+                                <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
+                            </div>
+                            <div className="footer">
+                                <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
