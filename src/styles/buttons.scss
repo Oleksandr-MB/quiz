@@ -21,7 +21,7 @@ button[class^="btn"] {
         background-color: $red;
     }
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled), &:active:not(:disabled) {
         background-color: $green;
         font-weight: bold;
         color: $darker-blue;
