@@ -100,7 +100,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                                 <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
                             </div>
                             <div className="show-solution" hidden={!showSolution}>
-                                <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
+                                <p className="result"><span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/></p>
                             </div>
 
                             <div className="footer">
