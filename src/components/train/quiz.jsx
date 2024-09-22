@@ -102,8 +102,6 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                                     <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
                                 </div>
                             </p>
-<<<<<<< HEAD
-=======
 
                             <div className="show-solution-btn">
                                 <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
@@ -112,7 +110,6 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                                 <p className="result"><span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/></p>
                             </div>
 
->>>>>>> 36838a7c02653bfb243260eef25555f932909599
                             <div className="footer">
                                 <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
                             </div>
