@@ -49,9 +49,9 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
         if (questionIndex !== filteredQuestions.length - 1) {
             setQuestionIndex(questionIndex + 1);
             setUserAnswer([]);
-        } else {
+        } 
+        else
             setState("result");
-        }
     };
 
     if (filteredQuestions.length === 0) 
@@ -91,28 +91,24 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                     <div className="popup-content">
                         <div className="popup-feedback">
                             <p className="result">
-                                <span className="question-recap">{feedback.status}</span><br/>
+                                <span className="question-recap"><strong>{feedback.status}</strong></span><br/>
                                 <span className="answer-recap">You selected: </span><Latex>{String(feedback.userSelection)}</Latex><br/>
                                 <span className="answer-recap">Correct answer: </span><Latex>{String(feedback.correctAnswers)}</Latex><br/>
-
-                                <div className="show-solution-btn">
-                                    <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
-                                </div>
-                                <div className="show-solution" hidden={!showSolution}>
-                                    <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
-                                </div>
                             </p>
+                        </div>
 
-                            <div className="show-solution-btn">
-                                <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
-                            </div>
-                            <div className="show-solution" hidden={!showSolution}>
-                                <p className="result"><span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/></p>
-                            </div>
-
-                            <div className="footer">
-                                <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
-                            </div>
+                        <div className="show-solution-btn">
+                            <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
+                        </div>
+                        
+                        <div className="solution" hidden={!showSolution}>
+                            <p className="result">
+                                <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
+                            </p>
+                        </div>
+                        
+                        <div className="footer">
+                            <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
                         </div>
                     </div>
                 </div>

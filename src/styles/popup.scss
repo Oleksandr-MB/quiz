@@ -1,7 +1,9 @@
 @import "./colors.scss";
 
 .popup {
-    display: block;
+    width: 80%;
+    height: 50%;
+    display: flex;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -10,17 +12,15 @@
     height: 100%;
     background-color: $transperent-darker-blue;
     border-radius: 8px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
+    height: 80%;
     background-color: $dark-blue;
     padding: 1%;
     border: 1px solid $darker-blue;
-    width: 80%;
-    height: 50%;
     max-width: 600px;
     border-radius: 8px; 
     font-size: 16px;
@@ -32,18 +32,12 @@
     }
 }
 
-.popup-feedback {
-    margin: 5%;
-}
-
 .show-solution-btn {
     color: $green;
-    margin-left: auto;
-    margin-right: auto;
     font-weight: bold;
     font-size: x-large;
+    margin: 0 auto 5%;
     max-width: fit-content;
-    margin-bottom: 5%;
 }
 
 .show-solution {

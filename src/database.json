@@ -853,6 +853,715 @@
         "solution": "",
         "topic": "Linear Systems",
         "subTopic": ""
-    }
+    },
+    {
+        "id": "2.1.1",
+        "text": "The size of a matrix is written as $x \\times y$, where...",
+        "type": "MC",
+        "answerOptions": [
+            "$x$ is the number of rows, $y$ is a number of columns",
+            "$x$ is the number of columns, $y$ is a number of rows"
+        ],
+        "correctAnswer": ["$x$ is the number of rows, $y$ is a number of columns"],
+        "solution": "A matrix size is determined as $x \\times y$, where $x$ is the number of rows, $y$ is a number of columns.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.2",
+        "text": "What is the size of the following matrix? $\\begin{pmatrix} 1 & 7 & -4 \\\\ 6 & -2 & -2 \\\\ 3 & 3 & 6 \\\\ 1 & 2 & 4 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "$3 \\times 4$",
+            "$4 \\times 3$"
+        ],
+        "correctAnswer": ["$4 \\times 3$"],
+        "solution": "A matrix size is determined as $x \\times y$, where $x$ is the number of rows, $y$ is a number of columns.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.3",
+        "text": "In which entry of the matrix $M$ is the value equal to 0? $\\begin{pmatrix} 3 & 7 & -2 \\\\ 0 & -2 & -3 \\\\ 5 & 3 & 1 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "$(M)_{01}$",
+            "$(M)_{11}$",
+            "$(M)_{21}$",
+            "$(M)_{31}$"
+        ],
+        "correctAnswer": ["$(M)_{21}$"],
+        "solution": "The entry that occurs in row $i$ and column $j$ (starting from 1) of a matrix $M$ is usually denoted by $(M)_{ij}$ or by $m_{ij}$, so the entry in the second row and the first column is denoted as $(M)_{21}$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.4",
+        "text": "What is the order of the following matrix? $\\begin{pmatrix} 2 & 1 & -2 \\\\ 1 & 0 & 9 \\\\ 2 & 3 & 1 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "1",
+            "9",
+            "3",
+            "It does not have an order"
+        ],
+        "correctAnswer": ["3"],
+        "solution": "A matrix of size $n \\times n$ is a square matrix of order $n$, so in this case of order 3.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.5",
+        "text": "What is the order of the following matrix? $\\begin{pmatrix} 3 & 0 & -1 \\\\ 2 & -8 & -2 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "2",
+            "3",
+            "1",
+            "It does not have an order"
+        ],
+        "correctAnswer": ["It does not have an order"],
+        "solution": "Only square matrices have an order.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.6",
+        "text": "Select correct statements about the following matrix. $\\begin{pmatrix} 8 & 0 & -1 & 3 \\\\ 2 & -8 & -2 & 4 \\\\ 2 & 1 & -2 & 2 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "Its size is $3 \\times 4$",
+            "Its size is $4 \\times 3$",
+            "It is not square",
+            "Its order is equal to 3",
+            "Its order is equal to 4",
+            "It has 12 entries"
+        ],
+        "correctAnswer": [
+            "Its size is $3 \\times 4$",
+            "It is not square",
+            "It has 12 entries"
+        ],
+        "solution": "This matrix is $3 \\times 4$, as it has 3 rows and 4 columns, so it is not square and therefore does not have an order. The total number of entries in the matrix is equal to $\\#_{rows} \\times \\#_{cols}$, $3 \\times 4 = 12$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.7",
+        "text": "The main diagonal of $n \\times n$ matrix $A$ are entries $a_{11}, a_{22}, \\ldots, a_{nn}$?",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["True"],
+        "solution": "This can be easily shown on a matrix $\\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}$ where $a_{11}$ and $a_{22}$ form the main diagonal.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.1.8",
+        "text": "What is the trace of the matrix? $\\begin{pmatrix} -2 & 0 & 9 \\\\ 1 & 4 & -3 \\\\ 0 & 0 & 2 \\end{pmatrix}$",
+        "type": "MC",
+        "answerOptions": [
+            "4",
+            "-3",
+            "-1",
+            "13"
+        ],
+        "correctAnswer": ["4"],
+        "solution": "The entries on the main diagonal are $-2, 4, 2$ and their sum is 4.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Basic notions"
+    },
+    {
+        "id": "2.2.1",
+        "text": "Any two matrices can be added or subtracted.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["False"],
+        "solution": "We can only add two matrices if they have the same size.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.2.2",
+        "text": "If $A$ and $B$ are matrices of the same size, then $A+B = B+A$.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["True"],
+        "solution": "Matrix addition is commutative, meaning $A+B = B+A$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.2.3",
+        "text": "Perform a matrix addition of matrices $\\begin{pmatrix} 1 & 2 & 4 \\\\ 3 & -4 & -3 \\\\ 8 & 1 & 2 \\end{pmatrix}$ and $\\begin{pmatrix} 5 & -6 & 1 \\\\ 1 & 2 & 2 \\\\ 6 & 0 & 2 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 6 & 4 & 5 \\\\ 4 & 2 & -1 \\\\ 14 & 1 & 4 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 6 & -4 & 5 \\\\ 4 & -2 & -1 \\\\ 14 & 1 & 4 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 6 & -4 & 5 \\\\ 4 & -2 & -1 \\\\ 14 & 1 & 4 \\end{pmatrix}$"
+        ],
+        "solution": "The result of summing two matrices is a new matrix, each entry of which is the sum of the corresponding entries of the matrices that have been added ($((C)_{ij} = (A)_{ij} + (B)_{ij})$).",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.2.4",
+        "text": "Multiply the following matrix by the scalar 3: $\\begin{pmatrix} 0 & -2 \\\\ 1 & 4 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 0 & -6 \\\\ 3 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & -6 \\\\ 3 & 8 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & -2 \\\\ 3 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & -6 \\\\ 1 & 12 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 0 & -6 \\\\ 3 & 12 \\end{pmatrix}$"
+        ],
+        "solution": "Each entry of the matrix is multiplied by the scalar of 3.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.2.5",
+        "text": "Perform the matrix subtraction of the following matrices: $\\begin{pmatrix} 7 & 5 \\\\ 3 & 2 \\end{pmatrix}$ and $\\begin{pmatrix} 4 & 1 \\\\ 2 & 3 \\end{pmatrix}$. ",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 3 & 4 \\\\ 1 & -1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 3 & 4 \\\\ -1 & -1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 3 & 4 \\\\ -1 & 1 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 3 & 4 \\\\ 1 & -1 \\end{pmatrix}$"
+        ],
+        "solution": "Each entry of the resulting matrix is the difference of the corresponding entries of the matrices.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.2.6",
+        "text": "What is a linear combination of matrices?",
+        "type": "MC",
+        "answerOptions": [
+            "A linear combination of matrices is the sum of scalar multiples of those matrices.",
+            "A linear combination of matrices is the product of the matrices.",
+            "A linear combination of matrices involves adding matrices after multiplying each by a scalar.",
+            "A linear combination of matrices is the subtraction of one matrix from another."
+        ],
+        "correctAnswer": [
+            "A linear combination of matrices is the sum of scalar multiples of those matrices.",
+            "A linear combination of matrices involves adding matrices after multiplying each by a scalar."
+        ],
+        "solution": "A linear combination of matrices is the sum of scalar multiples of those matrices (e.g. for matrices $A, \\ B, \\ C$, and scalars $x, \\ y, \\ z$, $xA + yB - zC$ will be one of the possible linear combinations).",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Addition and scalar multiplication"
+    },
+    {
+        "id": "2.3.1",
+        "text": "For two matrices $A$ and $B$, the product $AB$ is defined if and only if the number of columns in $A$ is equal to the number of rows in $B$.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["True"],
+        "solution": "Matrix multiplication is defined only when the number of columns in the first matrix is equal to the number of rows in the second matrix.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.2",
+        "text": "If $A$ is an $n \\times m$ matrix and $B$ is an $m \\times k$ matrix, what will be the dimensions of the resulting matrix $AB$?",
+        "type": "MC",
+        "answerOptions": [
+            "$n \\times n$",
+            "$m \\times k$",
+            "$n \\times k$",
+            "$k \\times m$"
+        ],
+        "correctAnswer": ["$n \\times k$"],
+        "solution": "The resulting matrix $AB$ will have the number of rows of $A$ and the number of columns of $B$, which is $n \\times k$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.3",
+        "text": "The product of two matrices $A$ and $B$ is always commutative, i.e., $AB = BA$ (assuming that $AB$ is defined).",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["False"],
+        "solution": "Matrix multiplication is generally not commutative, as we can only multiply matrices with the sizes $n \\times m$ and $m \\times k$, resulting in a $n \\times k$ matrix. Swapping the matrices places results in the multiplication of $m \\times k$ and $n \\times m$ matrices, which is impossible if $n \\neq k$, meaning that in most cases the operation is impossible.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.4",
+        "text": "Which of the following statements about matrix multiplication is true?",
+        "type": "MC",
+        "answerOptions": [
+            "The product of two matrices is always a square matrix.",
+            "The product of two matrices is always a matrix of the same size as the original matrices.",
+            "The product of two matrices $A$ and $B$ is a matrix where each entry is the sum of the products of the corresponding entries from the rows of $A$ and the columns of $B$.",
+            "The product of two matrices is always a diagonal matrix."
+        ],
+        "correctAnswer": [
+            "The product of two matrices $A$ and $B$ is a matrix where each entry is the sum of the products of the corresponding entries from the rows of $A$ and the columns of $B$."
+        ],
+        "solution": "This statement correctly describes how each entry in the resulting matrix is computed during matrix multiplication.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.5",
+        "text": "Which of the following properties does matrix multiplication satisfy?",
+        "type": "MC",
+        "answerOptions": [
+            "Commutative Property",
+            "Associative Property",
+            "Distributive Property",
+            "Both Associative and Distributive Properties"
+        ],
+        "correctAnswer": ["Both Associative and Distributive Properties"],
+        "solution": "Matrix multiplication is associative, meaning $(AB)C = A(BC)$, and distributive, meaning $A(B + C) = AB + AC$. However, it is not commutative.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.6",
+        "text": "Calculate the product of the following matrices: $\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $\\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 4 & 6 \\\\ 10 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 4 & 6 \\\\ 10 & 15 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 4 & 6 \\\\ 12 & 18 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 4 & 6 \\\\ 10 & 18 \\end{pmatrix}$"
+        ],
+        "correctAnswer": ["$\\begin{pmatrix} 4 & 6 \\\\ 10 & 12 \\end{pmatrix}$"],
+        "solution": "Each entry of the resulting matrix is calculated by taking the dot product of the corresponding row of the first matrix and the column of the second.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.3.7",
+        "text": "Calculate the product of the following matrices: $\\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\\\ 6 & 7 \\end{pmatrix}$ and $\\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\\\ 6 & 7 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2 & 5 \\\\ 4 & 5 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2 & 3 & 2 \\\\ 4 & 5 & 4 \\\\ 6 & 7 & 6 \\end{pmatrix}$",
+            "Undetermined"
+        ],
+        "correctAnswer": ["$\\begin{pmatrix} 2 & 3 & 2 \\\\ 4 & 5 & 4 \\\\ 6 & 7 & 6 \\end{pmatrix}$"],
+        "solution": "The sizes of the matrices are $3 \\times 2$ and $2 \\times 3$, so the result is a $3 \\times 3$ matrix. Each entry of the resulting matrix is calculated by taking the dot product of the corresponding row of the first matrix and the column of the second.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Matrix multiplication"
+    },
+    {
+        "id": "2.4.1",
+        "text": "The transpose of a matrix $A$, denoted as $A^T$, is obtained by swapping its rows and columns.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["True"],
+        "solution": "The transpose of a matrix is formed by interchanging its rows and columns.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.4.2",
+        "text": "Which of the following statements about the transpose of a matrix is true?",
+        "type": "MC",
+        "answerOptions": [
+            "The transpose of a matrix is always a square matrix.",
+            "The transpose of a matrix $A$ is obtained by multiplying each entry of $A$ by -1.",
+            "The transpose of a matrix $A$ is obtained by swapping its rows and columns.",
+            "The transpose of a matrix $A$ is obtained by adding a scalar to each entry of $A$."
+        ],
+        "correctAnswer": [
+            "The transpose of a matrix $A$ is obtained by swapping its rows and columns."
+        ],
+        "solution": "This statement correctly describes how the transpose of a matrix is formed.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.4.3",
+        "text": "Which of the following properties does the transpose operation satisfy?",
+        "type": "MC",
+        "answerOptions": [
+            "$(A^T)^T = A$",
+            "$(A + B)^T = A^T + B^T$",
+            "$(AB)^T = B^T A^T$",
+            "None of the above"
+        ],
+        "correctAnswer": [
+            "$(A^T)^T = A$",
+            "$(A + B)^T = A^T + B^T$",
+            "$(AB)^T = B^T A^T$"
+        ],
+        "solution": "The transpose of the transpose of a matrix is the original matrix, the transpose of a sum of matrices is the sum of their transposes, and the transpose of a product of matrices is the product of their transposes in reverse order.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.4.4",
+        "text": "Find the transpose of the following matrix: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 4 & 5 & 6 \\\\ 1 & 2 & 3 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 5 \\\\ 2 & 6 \\\\ 3 & 4 \\end{pmatrix}$"
+        ],
+        "correctAnswer": ["$\\begin{pmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{pmatrix}$"],
+        "solution": "The transpose of matrix $A$ is obtained by swapping its rows and columns.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.4.5",
+        "text": "Find the transpose of the following matrix: $\\begin{pmatrix} 7 & 8 \\\\ 9 & 10 \\\\ 11 & 12 \\end{pmatrix}$.",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 7 & 8 \\\\ 9 & 10 \\\\ 11 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 7 & 8 & 9 \\\\ 10 & 11 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 7 & 10 \\\\ 8 & 11 \\\\ 9 & 12 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 7 & 9 & 11 \\\\ 8 & 10 & 12 \\end{pmatrix}$"
+        ],
+        "correctAnswer": ["$\\begin{pmatrix} 7 & 9 & 11 \\\\ 8 & 10 & 12 \\end{pmatrix}$"],
+        "solution": "The transpose of a matrix is obtained by swapping its rows and columns.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.4.6",
+        "text": "If $M$ is a $3 \\times 2$ matrix, what will be the dimensions of $M^T$?",
+        "type": "MC",
+        "answerOptions": [
+            "$2 \\times 3$",
+            "$3 \\times 3$",
+            "$2 \\times 2$",
+            "$3 \\times 2$"
+        ],
+        "correctAnswer": ["$2 \\times 3$"],
+        "solution": "The transpose of a $m \\times n$ matrix is a $n \\times m$ matrix.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Transposition"
+    },
+    {
+        "id": "2.5.1",
+        "text": "What is a zero matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix with all entries equal to zero.",
+            "A matrix with all entries equal to one.",
+            "A matrix with no entries.",
+            "A matrix with all entries equal to the same non-zero value."
+        ],
+        "correctAnswer": ["A matrix with all entries equal to zero."],
+        "solution": "A zero matrix is a matrix in which all the entries are zero.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.2",
+        "text": "Which of the following is a property of a zero matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "It is always invertible.",
+            "It is the additive identity in matrix addition.",
+            "It has a non-zero determinant.",
+            "It is always a square matrix."
+        ],
+        "correctAnswer": ["It is the additive identity in matrix addition."],
+        "solution": "The zero matrix is the additive identity because adding it to any matrix $A$ results in $A$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.3",
+        "text": "What is a triangular matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix with all entries equal to zero.",
+            "A matrix that is either upper triangular or lower triangular.",
+            "A matrix with all entries equal to one.",
+            "A matrix with non-zero entries only on the diagonal."
+        ],
+        "correctAnswer": ["A matrix that is either upper triangular or lower triangular."],
+        "solution": "A triangular matrix is one that is either upper triangular (all entries below the main diagonal are zero) or lower triangular (all entries above the main diagonal are zero).",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.4",
+        "text": "Which of the following is true for an upper triangular matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "All entries below the main diagonal are zero.",
+            "All entries above the main diagonal are zero.",
+            "All entries on the main diagonal are zero.",
+            "All entries are non-zero."
+        ],
+        "correctAnswer": ["All entries below the main diagonal are zero."],
+        "solution": "In an upper triangular matrix, all entries below the main diagonal are zero.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.5",
+        "text": "Which of the following is true for a lower triangular matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "All entries below the main diagonal are zero.",
+            "All entries above the main diagonal are zero.",
+            "All entries on the main diagonal are zero.",
+            "All entries are non-zero."
+        ],
+        "correctAnswer": ["All entries above the main diagonal are zero."],
+        "solution": "In a lower triangular matrix, all entries above the main diagonal are zero.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.6",
+        "text": "What is an identity matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix with all entries equal to zero.",
+            "A matrix with ones on the main diagonal and zeros elsewhere.",
+            "A matrix with all entries equal to one.",
+            "A matrix with non-zero entries only on the main diagonal."
+        ],
+        "correctAnswer": ["A matrix with ones on the main diagonal and zeros elsewhere."],
+        "solution": "An identity matrix has ones on the main diagonal and zeros in all other positions.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.7",
+        "text": "Which of the following is a property of the identity matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "It is the multiplicative identity in matrix multiplication.",
+            "It is always invertible.",
+            "It is its own inverse.",
+            "All of the above."
+        ],
+        "correctAnswer": ["All of the above."],
+        "solution": "The identity matrix is the multiplicative identity, is always invertible, and is its own inverse.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.8",
+        "text": "What is a symmetrical matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix that is equal to its transpose.",
+            "A matrix with all entries equal to zero.",
+            "A matrix with all entries equal to one.",
+            "A matrix with non-zero entries only on the diagonal."
+        ],
+        "correctAnswer": ["A matrix that is equal to its transpose."],
+        "solution": "A symmetrical matrix is one that is equal to its transpose, meaning $A = A^T$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.9",
+        "text": "Which of the following is a property of a symmetrical matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "It is always invertible.",
+            "It is always a square matrix.",
+            "Its trace always equals to 0.",
+            "If a linear system has a symmetrical coefficient matrix, it is always consistent."
+        ],
+        "correctAnswer": ["It is always a square matrix."],
+        "solution": "The only correct statement is that symmetric matrices are always square matrices, as in order for the matrix to be equal to its own transpose, it must keep its dimensions unchanged. The other statements are incorrect.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.10",
+        "text": "Which of the following matrices is symmetrical?",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & 1 \\\\ 1 & -1 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & 1 \\\\ 1 & -1 \\end{pmatrix}$"
+        ],
+        "solution": "$\\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$, $\\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix}$ and $\\begin{pmatrix} 0 & 1 \\\\ 1 & -1 \\end{pmatrix}$ are symmetrical because they are equal to their transposes.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.11",
+        "text": "What is a skew-symmetric matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix that is equal to its transpose.",
+            "A matrix that is equal to the negative of its transpose.",
+            "A matrix with all entries equal to zero.",
+            "A matrix with non-zero entries only on the diagonal."
+        ],
+        "correctAnswer": ["A matrix that is equal to the negative of its transpose."],
+        "solution": "A skew-symmetric matrix is one that satisfies $A = -A^T$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.12",
+        "text": "Which of the following is a property of a skew-symmetric matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "All diagonal entries are zero.",
+            "It is always a square matrix.",
+            "It is always invertible.",
+            "The trace of skew-symmetric matrix is equal to 0."
+        ],
+        "correctAnswer": [
+            "All diagonal entries are zero.",
+            "It is always a square matrix.",
+            "The trace of skew-symmetric matrix is equal to 0."
+        ],
+        "solution": "Skew-symmetric matrices are always square matrices, and all diagonal entries are zero, resulting in a trace of 0. However, not all skew-symmetric matrices are invertible.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },
+    {
+        "id": "2.5.13",
+        "text": "Which of the following matrices is skew-symmetric?",
+        "type": "MC",
+        "answerOptions": [
+            "$\\begin{pmatrix} 0 & 2 \\\\ -2 & 0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$"
+        ],
+        "correctAnswer": [
+            "$\\begin{pmatrix} 0 & 2 \\\\ -2 & 0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$"
+        ],
+        "solution": "$\\begin{pmatrix} 0 & 2 \\\\ -2 & 0 \\end{pmatrix}$, $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$, and $\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$ are skew-symmetric because they are equal to the negative of their transposes.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Special matrices"
+    },    
+    {
+        "id": "2.6.1",
+        "text": "What conditions must a square matrix satisfy to be considered invertible?",
+        "type": "MC",
+        "answerOptions": [
+            "It must be a square matrix.",
+            "Its determinant must be non-zero.",
+            "It must have rank equal to the number of rows (or columns).",
+            "All of the above."
+        ],
+        "correctAnswer": ["All of the above."],
+        "solution": "A matrix is invertible if it is square, has a non-zero determinant, and has rank equal to the number of rows (or columns).",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    },
+    {
+        "id": "2.6.2",
+        "text": "Explain the relationship between the rank of a square matrix and its invertibility.",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix is invertible if its rank is less than its number of rows.",
+            "A matrix is invertible if its rank is equal to its number of rows.",
+            "A matrix is invertible if its rank is zero.",
+            "None of the above."
+        ],
+        "correctAnswer": ["A matrix is invertible if its rank is equal to its number of rows."],
+        "solution": "A matrix is invertible if it has rank equal to the number of rows (or columns).",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    },
+    {
+        "id": "2.6.3",
+        "text": "What is the significance of the identity matrix in the context of matrix invertibility?",
+        "type": "MC",
+        "answerOptions": [
+            "The identity matrix is always invertible.",
+            "The identity matrix is the inverse of itself.",
+            "The product of a matrix and its inverse is the identity matrix.",
+            "All of the above."
+        ],
+        "correctAnswer": ["All of the above."],
+        "solution": "The identity matrix is always invertible, is its own inverse, and the product of any matrix and its inverse is the identity matrix.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    },
+    {
+        "id": "2.6.4",
+        "text": "How does the concept of row echelon form help in determining the invertibility of a square matrix?",
+        "type": "MC",
+        "answerOptions": [
+            "A matrix in row echelon form is always invertible.",
+            "A matrix is invertible if its row echelon form has no zero rows.",
+            "A matrix is invertible if its row echelon form has at least one zero row.",
+            "None of the above."
+        ],
+        "correctAnswer": ["A matrix is invertible if its row echelon form has no zero rows."],
+        "solution": "If a matrix can be row reduced to row echelon form without any zero rows, it is invertible, as the matrix can be further simplified to the identity matrix using elementary row operations.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    },
+    {
+        "id": "2.6.5",
+        "text": "Describe the process of finding the inverse of a $2 \\times 2$ matrix.",
+        "type": "MC",
+        "answerOptions": [
+            "Swap the entries on the main diagonal, change the signs of the off-diagonal entries, and divide by the determinant.",
+            "Swap the entries on the main diagonal and multiply by the determinant.",
+            "Change the signs of all entries and divide by the determinant.",
+            "None of the above."
+        ],
+        "correctAnswer": ["Swap the entries on the main diagonal, change the signs of the off-diagonal entries, and divide by the determinant."],
+        "solution": "For a $2 \\times 2$ matrix $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, the inverse is $\\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    },
+    {
+        "id": "2.6.6",
+        "text": "Can a non-square matrix be invertible? Why or why not?",
+        "type": "MC",
+        "answerOptions": [
+            "Yes, because any matrix can have an inverse.",
+            "No, because only square matrices can have inverses.",
+            "Yes, if it has rank equal to the number of rows (or columns).",
+            "No, because non-square matrices do not have determinants."
+        ],
+        "correctAnswer": [
+            "No, because only square matrices can have inverses.",
+            "No, because non-square matrices do not have determinants."
+        ],
+        "solution": "Only square matrices can have inverses because the concept of an inverse requires the matrix to be able to multiply with another matrix to produce the identity matrix, which is only defined for square matrices. Also, for a matrix, having a non-zero determinant is an equivalent condition to being invertible, so both presented reasons why a non-square matrix can't be invertible are valid.",
+        "topic": "Matrices and Matrix Operations",
+        "subTopic": "Invertibility"
+    }      
 ]
 

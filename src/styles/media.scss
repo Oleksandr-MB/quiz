@@ -38,7 +38,7 @@
     @include main-container(75vh, 60vw);
     @include question-text(17.5px);
     @include select-answer(15.5px);
-    @include popup-content(80%, 55%);
+    @include popup-content(65%, 55%);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -46,7 +46,7 @@
     @include main-container(80vh, 70vw);
     @include question-text(17px);
     @include select-answer(15px);
-    @include popup-content(82.5%, 60%);
+    @include popup-content(67.5%, 60%);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -54,7 +54,7 @@
     @include main-container(80vh, 70vw);
     @include question-text(16.5px);
     @include select-answer(14.5px);
-    @include popup-content(85%, 65%);
+    @include popup-content(70%, 65%);
 }
 
 @media only screen and (max-width: 800px) {
@@ -62,5 +62,5 @@
     @include main-container(90vh, 90vw);
     @include question-text(16px);
     @include select-answer(14px);
-    @include popup-content(87.5%, 70%);
+    @include popup-content(72.5%, 70%);
 }
