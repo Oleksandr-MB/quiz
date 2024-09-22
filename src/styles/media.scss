@@ -33,34 +33,18 @@
     }
 }
 
-@media only screen and (max-width: 1400px) {
-    @include button-width(22.5%);
-    @include main-container(75vh, 60vw);
-    @include question-text(17.5px);
-    @include select-answer(15.5px);
-    @include popup-wrapper(65%, 55%);
-}
-
-@media only screen and (max-width: 1200px) {
-    @include button-width(27.5%);
+@media only screen and (max-width: 1000px) {
+    @include button-width(25%);
     @include main-container(80vh, 70vw);
     @include question-text(17px);
     @include select-answer(15px);
-    @include popup-wrapper(67.5%, 60%);
+    @include popup-wrapper(75%, 65%);
 }
 
-@media only screen and (max-width: 1000px) {
-    @include button-width(32.5%);
-    @include main-container(80vh, 70vw);
-    @include question-text(16.5px);
-    @include select-answer(14.5px);
-    @include popup-wrapper(70%, 65%);
-}
-
-@media only screen and (max-width: 800px) {
-    @include button-width(37.5%);
+@media only screen and (max-width: 500px) {
+    @include button-width(30%);
     @include main-container(90vh, 90vw);
     @include question-text(16px);
     @include select-answer(14px);
-    @include popup-wrapper(72.5%, 70%);
+    @include popup-wrapper(90%, 90%);
 }
