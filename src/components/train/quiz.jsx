@@ -94,15 +94,14 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                                 <span className="question-recap">{feedback.status}</span><br/>
                                 <span className="answer-recap">You selected: </span><Latex>{String(feedback.userSelection)}</Latex><br/>
                                 <span className="answer-recap">Correct answer: </span><Latex>{String(feedback.correctAnswers)}</Latex><br/>
+
+                                <div className="show-solution-btn">
+                                    <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
+                                </div>
+                                <div className="show-solution" hidden={!showSolution}>
+                                    <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
+                                </div>
                             </p>
-
-                            <div className="show-solution-btn">
-                                <span onClick={() => setShowSolution(!showSolution)}>Show solution {showSolution ? "\u2227" : "\u2228"}</span>
-                            </div>
-                            <div className="show-solution" hidden={!showSolution}>
-                                <span className="answer-recap">Solution: </span><Latex>{String(feedback.solution)}</Latex><br/>
-                            </div>
-
                             <div className="footer">
                                 <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
                             </div>
