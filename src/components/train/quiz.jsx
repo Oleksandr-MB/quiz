@@ -11,7 +11,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
 
     useEffect(() => {
         const filtered = questions.filter(question => question.subTopic === subTopic);
-        setFilteredQuestions(filtered.length > 12 ? filtered.slice(0, 12) : filtered);
+        setFilteredQuestions(filtered);
     }, [subTopic, setFilteredQuestions]);
 
     const onAnswer = (newOption) => {
@@ -44,10 +44,10 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
         setResultPopUp(true);
     };
 
-    const closeResultPopUp = () => {
+    const closeResultPopUp = (dir) => {
         setResultPopUp(false);
-        if (questionIndex !== filteredQuestions.length - 1) {
-            setQuestionIndex(questionIndex + 1);
+        if (questionIndex !== filteredQuestions.length - dir) {
+            setQuestionIndex(questionIndex + dir);
             setUserAnswer([]);
         } 
         else
@@ -94,6 +94,7 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                             <div className="popup-feedback">
                                 <p className="result">
                                     <span className="question-recap"><strong>{feedback.status}</strong></span><br/>
+                                    <span className="question-recap">Question: </span><Latex>{String(filteredQuestions[questionIndex].text)}</Latex><br/>
                                     <span className="answer-recap">You selected: </span><Latex>{String(feedback.userSelection)}</Latex><br/>
                                     <span className="answer-recap">Correct answer: </span><Latex>{String(feedback.correctAnswers)}</Latex><br/>
                                 </p>
@@ -112,7 +113,8 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                         </div>
                         
                         <div className="footer">
-                            <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp()}}>Next question</button>
+                            <button className="btn-prev" disabled={questionIndex===0} onClick={() => {setShowSolution(false); closeResultPopUp(-1)}}>Previous</button>
+                            <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp(1)}}>Next</button>
                         </div>
                     </div>
                 </div>

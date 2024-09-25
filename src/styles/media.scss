@@ -1,8 +1,9 @@
 @import "./colors.scss";
 
-@mixin button-width($width) {
+@mixin button-size($width, $height) {
     button[class^="btn"] {
         width: $width;
+        height: $height;
     }
 }
 
@@ -34,17 +35,17 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    @include button-width(25%);
+    @include button-size(25%, 50%);
     @include main-container(80vh, 70vw);
     @include question-text(17px);
-    @include select-answer(15px);
+    @include select-answer(16px);
     @include popup-wrapper(75%, 65%);
 }
 
 @media only screen and (max-width: 500px) {
-    @include button-width(30%);
+    @include button-size(33%, 33%);
     @include main-container(90vh, 90vw);
     @include question-text(16px);
-    @include select-answer(14px);
+    @include select-answer(16px);
     @include popup-wrapper(90%, 90%);
 }
