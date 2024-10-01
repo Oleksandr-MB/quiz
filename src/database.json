@@ -716,8 +716,30 @@
         "subTopic": "Geometry"
     },
     {
-        "id": "1.7.4",
+        "id": "1.7.5",
         "text": "In $\\mathbb{R}^2$, the solution set to a linear system can be:",
+        "type": "MC",
+        "answerOptions": [
+            "The unit circle",
+            "Any half-plane",
+            "The empty set",
+            "The whole plane",
+            "Any line",
+            "Any point"
+        ],
+        "correctAnswer": [
+            "The empty set",
+            "The whole plane",
+            "Any line",
+            "Any point"
+        ],
+        "solution": "The solution set can be the empty set ($0x+0y=1$), the whole plane ($0x+0y=0$), any line $(x,y)=(t,at+b)$ or any point $(x,y)=(a,b)$, when the system has a single solution. So, the solution set cannot be the unit circle, a half-plane, a line not through the origin, or a point that is not the origin.",
+        "topic": "Linear Systems",
+        "subTopic": "Geometry"
+    },
+    {
+        "id": "1.7.6",
+        "text": "In $\\mathbb{R}^2$, the solution set to a homogenious linear system can be:",
         "type": "MC",
         "answerOptions": [
             "The unit circle",
@@ -731,12 +753,12 @@
             "The empty set",
             "The whole plane"
         ],
-        "solution": "The solution set can be the empty set ($0x+0y=1$) or the whole plane ($0x+0y=0$). Else, the solution set must be the origin $(x,y)=(0,0)$ or a line through the origin. So, the solution set cannot be the unit circle, a half-plane, a line not through the origin, or a point that is not the origin.",
+        "solution": "The solution set can be only be the whole plane ($0x+0y=0$) or a point in the origin. Else, the solution set must be the origin $(x,y)=(0,0)$ or a line through the origin. So, the solution set cannot be the unit circle, a half-plane, a line not through the origin, or a point that is not the origin.",
         "topic": "Linear Systems",
         "subTopic": "Geometry"
     },
     {
-        "id": "1.7.5",
+        "id": "1.7.7",
         "text": "The two lines represented by the equations $2x + 4y = 3$ and $x + 2y = 1$ are:",
         "type": "MC",
         "answerOptions": [
