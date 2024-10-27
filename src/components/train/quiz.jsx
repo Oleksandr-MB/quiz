@@ -110,11 +110,10 @@ const Quiz = ({ setMode, filteredQuestions, setFilteredQuestions, subTopic, setS
                                 </p>
                             </div>
 
-                        </div>
-                        
-                        <div className="footer">
-                            <button className="btn-prev" disabled={questionIndex===0} onClick={() => {setShowSolution(false); closeResultPopUp(-1)}}>Previous</button>
-                            <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp(1)}}>Next</button>
+                            <div className="footer">
+                                <button className="btn-prev" disabled={questionIndex===0} onClick={() => {setShowSolution(false); closeResultPopUp(-1)}}>Previous</button>
+                                <button className="btn-next" onClick={() => {setShowSolution(false); closeResultPopUp(1)}}>Next</button>
+                            </div>
                         </div>
                     </div>
                 </div>

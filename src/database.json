@@ -739,7 +739,7 @@
     },
     {
         "id": "1.7.6",
-        "text": "In $\\mathbb{R}^2$, the solution set to a homogenious linear system can be:",
+        "text": "In $\\mathbb{R}^2$, the solution set to a homogeneous linear system can be:",
         "type": "MC",
         "answerOptions": [
             "The unit circle",
@@ -1584,6 +1584,552 @@
         "solution": "Only square matrices can have inverses because the concept of an inverse requires the matrix to be able to multiply with another matrix to produce the identity matrix, which is only defined for square matrices. Also, for a matrix, having a non-zero determinant is an equivalent condition to being invertible, so both presented reasons why a non-square matrix can't be invertible are valid.",
         "topic": "Matrices and Matrix Operations",
         "subTopic": "Invertibility"
-    }      
+    },
+    {
+        "id": "3.1.1",
+        "text": "What is the result of adding two vectors $u = (1, 2) $ and $v = (3, 4) $? ",
+        "type": "MC",
+        "answerOptions": [
+            "(4, 6)",
+            "(2, 6)",
+            "(3, 2)",
+            "(1, 4)"
+        ],
+        "correctAnswer": ["(4, 6)"],
+        "solution": "Vector addition is performed component-wise: $ (1 + 3, 2 + 4) = (4, 6) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.1.2",
+        "text": "Calculate the result of the vector subtraction $u = (5, 7) $ and $v = (2, 3) $.",
+        "type": "MC",
+        "answerOptions": [
+            "(3, 4)",
+            "(7, 10)",
+            "(2, 1)",
+            "(5, 3)"
+        ],
+        "correctAnswer": ["(3, 4)"],
+        "solution": "Vector subtraction is performed component-wise: $ (5 - 2, 7 - 3) = (3, 4) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.1.3",
+        "text": "Describe scalar multiplication of a vector.",
+        "type": "MC",
+        "answerOptions": [
+            "A vector multiplied by another vector.",
+            "A vector multiplied by a scalar value.",
+            "A sum of two vectors.",
+            "A vector with zero length."
+        ],
+        "correctAnswer": ["A vector multiplied by a scalar value."],
+        "solution": "Scalar multiplication involves scaling each component of a vector by a real number.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.1.4",
+        "text": "Compute the scalar multiplication of the vector $ u = (3, -1) $ by $ 2 $.",
+        "type": "MC",
+        "answerOptions": [
+            "(6, -2)",
+            "(3, -1)",
+            "(0, 0)",
+            "(2, -1)"
+        ],
+        "correctAnswer": ["(6, -2)"],
+        "solution": "Scalar multiplication is $ 2 \\cdot (3, -1) = (6, -2) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.1.5",
+        "text": "If $a = (4, 0) $ and $b = (0, 5) $, what is $a + b$?",
+        "type": "MC",
+        "answerOptions": [
+            "(4, 5)",
+            "(4, 0)",
+            "(0, 5)",
+            "(0, 0)"
+        ],
+        "correctAnswer": ["(4, 5)"],
+        "solution": "Adding the vectors gives $ (4 + 0, 0 + 5) = (4, 5) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.1.6",
+        "text": "State the commutative property of vector addition.",
+        "type": "MC",
+        "answerOptions": [
+            "$ u + v = v + u $",
+            "$ u - v = -v - u $",
+            "$ k(u + v) = ku + kv $",
+            "$ u \\cdot v = v \\cdot u $"
+        ],
+        "correctAnswer": ["$ u + v = v + u $"],
+        "solution": "This property states that the order of addition does not change the result.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Basic Operations on Vectors"
+    },
+    {
+        "id": "3.2.1",
+        "text": "What is the distributive property of scalar multiplication over vector addition?",
+        "type": "MC",
+        "answerOptions": [
+            "$ k(u + v) = ku + kv $",
+            "$ k(u + kv) = ku + kv $",
+            "$ k(u - v) = ku - kv $",
+            "None of the above."
+        ],
+        "correctAnswer": ["$ k(u + v) = ku + kv $"],
+        "solution": "This property indicates that scaling a sum of vectors results in the sum of the scaled vectors.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Rules and Properties of Vector Operations"
+    },
+    {
+        "id": "3.2.2",
+        "text": "If $ k = 3 $ and $ u = (1, 2) $, compute $ ku $.",
+        "type": "MC",
+        "answerOptions": [
+            "(3, 6)",
+            "(1, 2)",
+            "(6, 3)",
+            "(0, 0)"
+        ],
+        "correctAnswer": ["(3, 6)"],
+        "solution": "Scalar multiplication gives $ 3 \\cdot (1, 2) = (3, 6) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Rules and Properties of Vector Operations"
+    },
+    {
+        "id": "3.2.3",
+        "text": "What does the associative property of vector addition state?",
+        "type": "MC",
+        "answerOptions": [
+            "$ u + (v + w) = (u + v) + w $",
+            "$ u - v = -v + u $",
+            "$ u + v = v + u $",
+            "$ k(u + v) = ku + kv $"
+        ],
+        "correctAnswer": ["$ u + (v + w) = (u + v) + w $"],
+        "solution": "The sum of vectors is unchanged by how the vectors are grouped.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Rules and Properties of Vector Operations"
+    },
+    {
+        "id": "3.2.4",
+        "text": "What is the zero vector in vector addition?",
+        "type": "MC",
+        "answerOptions": [
+            "The vector with all components equal to 1.",
+            "The vector with all components equal to 0.",
+            "The vector with length 1.",
+            "A vector with no components."
+        ],
+        "correctAnswer": ["The vector with all components equal to 0."],
+        "solution": "The zero vector acts as the identity element for vector addition.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Rules and Properties of Vector Operations"
+    },
+    {
+        "id": "3.2.5",
+        "text": "Find $7 \\cdot (1, 3) + 6 \\cdot (-2, -3) $.",
+        "type": "MC",
+        "answerOptions": [
+            "(0, 0)",
+            "(-5, 3)",
+            "(4, 6)",
+            "(2, 0)"
+        ],
+        "correctAnswer": ["(-5, 3)"],
+        "solution": "Adding the vectors gives $ (7, 21) + (-12, -18) = (-5, 3) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Rules and Properties of Vector Operations"
+    },
+    {
+        "id": "3.3.1",
+        "text": "Define a linear combination of vectors.",
+        "type": "MC",
+        "answerOptions": [
+            "A vector formed by scaling and adding vectors.",
+            "A sum of two vectors.",
+            "A product of two vectors.",
+            "A constant vector."
+        ],
+        "correctAnswer": ["A vector formed by scaling and adding vectors."],
+        "solution": "A linear combination involves taking multiple vectors and scaling them by scalars before summing them.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Linear Combinations"
+    },
+    {
+        "id": "3.3.2",
+        "text": "If $ a = (1, 2) $ and $ b = (3, 4) $, find $ 2 \\cdot a – b $.",
+        "type": "MC",
+        "answerOptions": [
+            "(2, 4)",
+            "(2, 0)",
+            "(-1, 0)",
+            "(5, 8)"
+        ],
+        "correctAnswer": ["(-1, 0)"],
+        "solution": "$ 2a - b = (2, 4) - (3, 4) = (2–3, 4–4) = (-1, 0) $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Linear Combinations"
+    },
+    {
+        "id": "3.3.3",
+        "text": "How can you express a vector $ v $ as a linear combination of $ u_1, u_2, \\ldots, u_n $?",
+        "type": "MC",
+        "answerOptions": [
+            "By finding scalars $ c_1, c_2, \\ldots, c_n $ such that $ v = c_1 u_1 + c_2 u_2 + \\ldots + c_n u_n $.",
+            "By adding all vectors.",
+            "By taking the dot product.",
+            "By normalizing the vectors."
+        ],
+        "correctAnswer": [
+            "By finding scalars $ c_1, c_2, \\ldots, c_n $ such that $ v = c_1 {u_1} + c_2 {u_2} + \\ldots + c_n {u_n} $."
+        ],
+        "solution": "This expresses one vector as a combination of others.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Linear Combinations"
+    },
+    {
+        "id": "3.3.4",
+        "text": "Determine if $ (6, 3, 4) $ can be expressed as a linear combination of $ (1, 0) $ and $ (0, 1) $.",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": ["False"],
+        "solution": "It cannot be expressed as the target vector and basis vectors have different dimensions.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Linear Combinations"
+    },
+    {
+        "id": "3.4.1",
+        "text": "What is the definition of the norm of a vector $ v = (x, y) $?",
+        "type": "MC",
+        "answerOptions": [
+            "$ \\sqrt{x^2 + y^2} $",
+            "$ |x| + |y| $",
+            "$ x + y $",
+            "$ \\sqrt{|x| + |y|} $"
+        ],
+        "correctAnswer": [
+            "$ \\sqrt{x^2 + y^2} $"
+        ],
+        "solution": "The norm represents the length of the vector in Euclidean space.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.2",
+        "text": "Calculate the distance between the points $ (1, 2) $ and $ (4, 6) $.",
+        "type": "MC",
+        "answerOptions": [
+            "$ 3 $",
+            "$ 5 $",
+            "$ 4 $",
+            "$ 6 $"
+        ],
+        "correctAnswer": [
+            "$ 5 $"
+        ],
+        "solution": "Distance is calculated as $ \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{3^2 + 4^2} = 5 $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.3",
+        "text": "How do you find the angle $ \\theta $ between two vectors $ u $ and $ v $?",
+        "type": "MC",
+        "answerOptions": [
+            "Using the formula $ \\cos(\\theta) = \\frac{u \\cdot v}{||u|| ||v||} $.",
+            "By taking the sum of their components.",
+            "By multiplying the vectors.",
+            "By normalizing both vectors."
+        ],
+        "correctAnswer": [
+            "Using the formula $ \\cos(\\theta) = \\frac{u \\cdot v}{||u|| ||v||} $."
+        ],
+        "solution": "This formula derives from the definition of the dot product.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.4",
+        "text": "Find the norm of the vector $ v = (3, 4) $.",
+        "type": "MC",
+        "answerOptions": [
+            "$ 5 $",
+            "$ 7 $",
+            "$ 12 $",
+            "$ 6 $"
+        ],
+        "correctAnswer": [
+            "$ 5 $"
+        ],
+        "solution": "The norm is calculated as $ \\sqrt{3^2 + 4^2} = 5 $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.5",
+        "text": "What does it mean for two vectors to be orthogonal?",
+        "type": "MC",
+        "answerOptions": [
+            "Their dot product is zero.",
+            "Their magnitudes are equal.",
+            "They are parallel.",
+            "They form a triangle."
+        ],
+        "correctAnswer": [
+            "Their dot product is zero."
+        ],
+        "solution": "Orthogonality indicates that the vectors meet at a 90 degree angle.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.6",
+        "text": "Are $ u = (1, 0, 0) $ and $ v = (0, 1, 0) $ orthogonal?",
+        "type": "MC",
+        "answerOptions": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": [
+            "True"
+        ],
+        "solution": "The dot product of these vectors is 0, therefore they are orthogonal.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.7",
+        "text": "What does the triangle inequality state for vectors $ u $ and $ v $?",
+        "type": "MC",
+        "answerOptions": [
+            "$ ||u + v|| \\leq ||u|| + ||v|| $",
+            "$ ||u - v|| \\leq ||u|| + ||v|| $",
+            "$ ||u + v|| = ||u|| + ||v|| $",
+            "$ ||u + v|| \\geq ||u|| - ||v|| $"
+        ],
+        "correctAnswer": [
+            "$ ||u + v|| \\leq ||u|| + ||v|| $"
+        ],
+        "solution": "This inequality shows that the length of the sum of two vectors is less than or equal to the sum of their lengths.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.4.8",
+        "text": "Verify the triangle inequality for $ u = (1, 2) $ and $ v = (2, 3) $.",
+        "type": "MC",
+        "answerOptions": [
+            "$ ||u + v|| \\leq ||u|| + ||v|| $ is false.",
+            "$ ||u + v|| = ||u|| + ||v|| $.",
+            "$ ||u + v|| \\leq ||u|| + ||v|| $ is true.",
+            "None of the above."
+        ],
+        "correctAnswer": [
+            "$ ||u + v|| \\leq ||u|| + ||v|| $ is true."
+        ],
+        "solution": "Calculate $ ||u|| = \\sqrt{5}, \\ ||v|| = \\sqrt{13} \\implies ||u|| + ||v|| \\approx 5.84, \\ ||u + v|| = \\sqrt{3^2 + 5^2} \\approx 5.83$, so the $||u + v|| \\leq ||u|| + ||v|| $ is true.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Dot Product"
+    },
+    {
+        "id": "3.5.1",
+        "text": "Define the orthogonal projection of vector $ a $ onto vector $ b $.",
+        "type": "MC",
+        "answerOptions": [
+            "The component of $ a $ in the direction of $ b $.",
+            "The sum of two vectors.",
+            "The angle between two vectors.",
+            "The cross product of two vectors."
+        ],
+        "correctAnswer": [
+            "The component of $ a $ in the direction of $ b $."
+        ],
+        "solution": "The orthogonal projection quantifies how much of one vector lies in the direction of another.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Projections"
+    },
+    {
+        "id": "3.5.2",
+        "text": "Calculate the projection of $ a = (3, 4) $ onto $ b = (1, 0) $.",
+        "type": "MC",
+        "answerOptions": [
+            "$ (3, 0) $",
+            "$ (0, 4) $",
+            "$ (1, 0) $",
+            "$ (0, 0) $"
+        ],
+        "correctAnswer": [
+            "$ (3, 0) $"
+        ],
+        "solution": "The projection is found using $ \\frac{a \\cdot b}{||b||^2} b $.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Projections"
+    },
+    {
+        "id": "3.5.3",
+        "text": "What is the formula for the orthogonal projection of $ a $ onto $ b $?",
+        "type": "MC",
+        "answerOptions": [
+            "$ \\frac{a \\cdot b}{||b||^2} b $",
+            "$ a + b $",
+            "$ a - b $",
+            "$ ||b||^2 $"
+        ],
+        "correctAnswer": [
+            "$ \\frac{a \\cdot b}{||b||^2} b $"
+        ],
+        "solution": "This formula calculates the projection of one vector onto another.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Projections"
+    },
+    {
+        "id": "3.5.4",
+        "text": "Find the projection of $ u = (3, 4) $ onto $ v = (1, 1) $.",
+        "type": "MC",
+        "answerOptions": [
+            "$ (2, 1) $",
+            "$ (3.5, 3.5) $",
+            "$ (1.5, 1.5) $",
+            "$ (0, 0) $"
+        ],
+        "correctAnswer": [
+            "$ (3.5, 3.5) $"
+        ],
+        "solution": "The projection is calculated using the formula $proj_v u = \\frac{u \\cdot v}{||v||^2} v $, so $proj_v u = \\frac{(3, 4) \\cdot (1, 1)}{||(1, 1))||^2} (1, 1) = \\frac{7}{2} (1, 1) = (3.5, 3.5) $.",    
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Projections"
+    },
+    {
+        "id": "3.6.1",
+        "text": "What is the result of the cross product of two vectors $ u $ and $ v $? ",
+        "type": "MC",
+        "answerOptions": [
+            "A scalar.",
+            "A vector.",
+            "A matrix.",
+            "A point."
+        ],
+        "correctAnswer": [
+            "A vector."
+        ],
+        "solution": "The cross product results in a vector that is orthogonal to the plane formed by the two original vectors.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Cross Product"
+    },
+    {
+        "id": "3.6.2",
+        "text": "Calculate the cross product $ u = (1, 2, 3) $ and $ v = (4, 5, 6) $. ",
+        "type": "MC",
+        "answerOptions": [
+            "(-3, 6, -3)",
+            "(0, 0, 0)",
+            "(1, -2, 1)",
+            "(3, -6, 3)"
+        ],
+        "correctAnswer": [
+            "(-3, 6, -3)"
+        ],
+        "solution": "The cross product is calculated using the determinant of a matrix.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Cross Product"
+    },
+    {
+        "id": "3.6.3",
+        "text": "What does the magnitude of the cross product represent?",
+        "type": "MC",
+        "answerOptions": [
+            "The area of the parallelogram formed by the two vectors.",
+            "The length of the vectors.",
+            "The angle between the vectors.",
+            "The volume of a cube."
+        ],
+        "correctAnswer": [
+            "The area of the parallelogram formed by the two vectors."
+        ],
+        "solution": "The magnitude gives the area spanned by the vectors.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": "Cross Product"
+    },
+    {
+        "id": "3.7.1",
+        "text": "What is the relationship between the dot product and the cross product of two vectors?",
+        "type": "MC",
+        "answerOptions": [
+            "They always equal zero.",
+            "They are related by the identity $ ||u||^2 = ||u \\cdot v|| + ||u \\times v||^2 $.",
+            "They are commutative.",
+            "They both yield a scalar."
+        ],
+        "correctAnswer": [
+            "They are related by the identity $ ||u||^2 = ||u \\cdot v|| + ||u \\times v||^2 $."
+        ],
+        "solution": "This identity relates the lengths and products of vectors.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": ""
+    },
+    {
+        "id": "3.7.2",
+        "text": "If $ u = (1, 1) $ and $ v = (2, 0) $, find $ u \\cdot v $ and $ u \\times v $. ",
+        "type": "MC",
+        "answerOptions": [
+            "Dot: 2, Cross: 2",
+            "Dot: 2, Cross: 1",
+            "Dot: 0, Cross: 2",
+            "Dot: 1, Cross: 0"
+        ],
+        "correctAnswer": [
+            "Dot: 2, Cross: 0"
+        ],
+        "solution": "$ u \\cdot v = 2 $ and the cross product in 2D is 0.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": ""
+    },
+    {
+        "id": "3.7.3",
+        "text": "How does the angle between two vectors relate to their dot product?",
+        "type": "MC",
+        "answerOptions": [
+            "The angle is given by $ \\theta = \\cos^{-1} \\left( \\frac{u \\cdot v}{||u|| ||v||} \\right) $.",
+            "The angle is equal to their cross product.",
+            "The angle is independent of the dot product.",
+            "The angle is always 90 degrees."
+        ],
+        "correctAnswer": [
+            "The angle is given by $ \\theta = \\cos^{-1} \\left( \\frac{u \\cdot v}{||u|| ||v||} \\right) $."
+        ],
+        "solution": "This formula calculates the angle using the cosine of the angle.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": ""
+    },
+    {
+        "id": "3.7.4",
+        "text": "If $ u = (1, 2, 3) $ and $ v = (4, 5, 6) $, calculate $2u \\cdot (u \\times v)$. ",
+        "type": "MC",
+        "answerOptions": [
+            "0",
+            "6",
+            "-6",
+            "(-6, 12, -6)"
+        ],
+        "correctAnswer": [
+            "0"
+        ],
+        "solution": "As the cross product is performed first, the second operation is a dot product of 2 vectors, so the final result must be a scalar. By inspecting closely, we can see that we don't need to actually calculate anything as $(u \\times v)$ produces a vector orthogonal to both $u$ and $v$, therefore the dot product of $u$ and a vector that is orthogonal to $u$ is 0.",
+        "topic": "Euclidean Vector Spaces",
+        "subTopic": ""
+    }
 ]
 
